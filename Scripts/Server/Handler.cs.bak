@@ -1,0 +1,594 @@
+﻿using UnityEngine;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+
+namespace Server
+{
+	class AccountHandler
+	{
+		struct BagItem
+		{
+			public UInt16 itemid;
+			public UInt16 count;
+		}
+
+		public static ERROR_ID Create(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				PopupManager.Instance.CloseLoadingPopup();
+				PopupManager.Instance.ShowOKPopup("서버와의 연결이 끈겼습니다. 앱을 종료합니다.", Server.ServerMgr.Instance.ApplicationShutdown);
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				ServerMgr.id = brIn.ReadString();
+				ServerMgr.sessionID = brIn.ReadString();
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID LogIn(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (ServerMgr.bConnectToServer)
+			{
+				if (err == ERROR_ID.REQUEST_DUPLICATION) 
+				{
+					PopupManager.Instance.CloseLoadingPopup();
+					PopupManager.Instance.ShowOKPopup("서버와의 연결이 끈겼습니다. 앱을 종료합니다.", Server.ServerMgr.Instance.ApplicationShutdown);
+				}
+				if (err == ERROR_ID.NONE) err = ReadUserInfo(brIn);
+			}
+			else
+			{
+				Legion.Instance.SetUserData();
+			}
+			callBack(err);
+			return err;
+		}
+		static ERROR_ID ReadUserInfo(BinaryReader brIn)
+		{
+			int i;
+			int j;
+			Byte heroIndex = 0;
+			ServerMgr.sessionID = brIn.ReadString();
+			Legion.Instance.sName = brIn.ReadString();
+			Legion.Instance.u4Gold = brIn.ReadUInt32();
+			Legion.Instance.u4Cash = brIn.ReadUInt32();
+			Legion.Instance.u2Energy = brIn.ReadUInt16();
+			Legion.Instance.u2ForgeLevel = brIn.ReadUInt16();
+
+			UInt16 u2BagCount = brIn.ReadUInt16();
+			Dictionary<UInt16, BagItem> bag = new Dictionary<UInt16, BagItem>(u2BagCount);
+			for (i = 0; i < u2BagCount; i++)
+			{
+				BagItem item = new BagItem();
+				UInt16 slot = brIn.ReadUInt16();
+				item.itemid = brIn.ReadUInt16();
+				item.count = brIn.ReadUInt16();
+				bag.Add(slot, item);
+			}
+			UInt16 u2EquipCount = brIn.ReadUInt16();
+			for (i = 0; i < u2EquipCount; i++)
+			{
+				UInt16 slot = brIn.ReadUInt16();
+				BagItem item = bag[slot];
+				var level = (Byte)brIn.ReadUInt16();
+				var exp = brIn.ReadUInt32();
+				Byte[] slots = new Byte[ConstDef.SkillOfEquip];
+				UInt16[] stats = new UInt16[ConstDef.SkillOfEquip + ConstDef.EquipStatPointType];
+				for (j = 0; j < ConstDef.SkillOfEquip; j++)
+				{
+					slots[j] = brIn.ReadByte();
+					stats[j] = brIn.ReadUInt16();
+				}
+				for (j = 0; j < ConstDef.EquipStatPointType; j++)
+				{
+					stats[j + ConstDef.SkillOfEquip] = brIn.ReadUInt16();
+				}
+				Legion.Instance.cInventory.AddEquipment(slot, item.itemid, level, exp, slots, stats, brIn.ReadByte());
+				bag.Remove(slot);
+			}
+			foreach (KeyValuePair<UInt16, BagItem> kvp in bag)
+			{
+				Legion.Instance.cInventory.AddItem(kvp.Key, kvp.Value.itemid, kvp.Value.count);
+			}
+			bag.Clear();
+
+			Byte u1CrewCount = brIn.ReadByte();
+			for (i = 0; i < u1CrewCount; i++)
+			{
+				Legion.Instance.acCrews[i] = new Crew();
+				Legion.Instance.acCrews[i].u1Index = (Byte)(i + 1);
+				Byte u1Unlock = brIn.ReadByte();
+				if (u1Unlock % 2 == 1) Legion.Instance.acCrews[i].abLocks[0] = false;
+				u1Unlock /= 2;
+				if (u1Unlock % 2 == 1) Legion.Instance.acCrews[i].abLocks[1] = false;
+				u1Unlock /= 2;
+				if (u1Unlock % 2 == 1) Legion.Instance.acCrews[i].abLocks[2] = false;
+                var selectStageID = brIn.ReadUInt16();
+				Int64 s8ServerTime = brIn.ReadInt64();
+				Legion.Instance.acCrews[i].Dispatch(StageInfoMgr.Instance.GetStageInfo(selectStageID), DateTime.FromBinary(s8ServerTime));
+			}
+			Byte u1SelectedCrewIndex = brIn.ReadByte();
+			if (u1SelectedCrewIndex > 0)
+			{
+				Legion.Instance.cBestCrew = Legion.Instance.acCrews[u1SelectedCrewIndex - 1];
+			}
+			Hero[] heroes = new Hero[ConstDef.MaxHeroBelongTo + 1];
+			UInt16[] heroskillslotopen = new UInt16[ConstDef.MaxHeroBelongTo + 1];
+			Byte[] heroskillreset = new Byte[ConstDef.MaxHeroBelongTo + 1];
+			UInt16[] equips = new UInt16[Hero.MAX_EQUIP_OF_CHAR];
+			Byte u1HeroCount = brIn.ReadByte();
+			for (i = 0; i < u1HeroCount; i++)
+			{
+				heroIndex = brIn.ReadByte();
+				string name = brIn.ReadString();
+				UInt16 classID = brIn.ReadUInt16();
+				Hero hero = new Hero(heroIndex, classID, name);
+				var level = (Byte)brIn.ReadUInt16();
+				var exp = brIn.ReadUInt32();
+				hero.GetComponent<LevelComponent>().Set(level, exp);
+				//hero.GetComponent<LevelComponent>().Set((Byte)brIn.ReadUInt16(), brIn.ReadUInt32(), brIn.ReadByte());
+				Byte crewIndex = brIn.ReadByte();
+				Byte crewpos = brIn.ReadByte();
+				if (crewIndex > 0)
+				{
+					Legion.Instance.acCrews[crewIndex - 1].Fill(hero, crewpos);
+				}
+				Byte[] shape = brIn.ReadBytes(ConstDef.LengthOfShape);
+				hero.u1SelectedHair = shape[0];
+				hero.u1SelectedHairColor = shape[1];
+				hero.u1SelectedFace = shape[2];
+				UInt16[] stats = new UInt16[ConstDef.CharStatPointType];
+				for (j = 0; j < ConstDef.SkillOfEquip; j++)
+				{
+					stats[j] = brIn.ReadUInt16();
+				}
+				for (j = 0; j < Hero.MAX_EQUIP_OF_CHAR; j++)
+				{
+					equips[j] = brIn.ReadUInt16();
+				}
+				hero.Wear(equips);
+				hero.GetComponent<StatusComponent>().LoadStatus(stats, brIn.ReadByte());
+				hero.GetComponent<SkillComponent>().ResetCount = brIn.ReadByte();
+				heroes[heroIndex] = hero;
+			    heroskillslotopen[heroIndex] = brIn.ReadUInt16();
+			    heroskillreset[heroIndex] = brIn.ReadByte();
+			}
+			List<LearnedSkill> lstLearnInfo = null;
+			UInt16 u2HeroSkillCount = brIn.ReadUInt16();
+			Byte prevheroIndex = 0;
+			for (i = 0; i < u2HeroSkillCount; i++)
+			{
+				heroIndex = brIn.ReadByte();
+				if (prevheroIndex != heroIndex)
+				{
+					if (lstLearnInfo != null)
+					{
+						heroes[prevheroIndex].GetComponent<SkillComponent>().LoadSkill(heroskillslotopen[prevheroIndex], lstLearnInfo, heroskillreset[prevheroIndex]);
+					}
+					lstLearnInfo = new List<LearnedSkill>();
+					prevheroIndex = heroIndex;
+				}
+				LearnedSkill temp = new LearnedSkill();
+				temp.u1SlotNum = brIn.ReadByte();
+				temp.u1Level = (Byte)brIn.ReadUInt16();
+				temp.u1UseIndex = brIn.ReadByte();
+				lstLearnInfo.Add(temp);
+			}
+			if (lstLearnInfo != null)
+			{
+				heroes[heroIndex].GetComponent<SkillComponent>().LoadSkill(heroskillslotopen[heroIndex], lstLearnInfo, heroskillreset[heroIndex]);
+			}
+
+			foreach (Hero hero in heroes)
+			{
+				if (hero != null)
+					Legion.Instance.acHeros.Add(hero);
+			}
+
+			return ERROR_ID.NONE;
+		}
+		public static ERROR_ID LoginInfoMore(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (ServerMgr.bConnectToServer)
+			{
+				if (err == ERROR_ID.REQUEST_DUPLICATION)
+				{
+					PopupManager.Instance.CloseLoadingPopup();
+					PopupManager.Instance.ShowOKPopup("서버와의 연결이 끈겼습니다. 앱을 종료합니다.", Server.ServerMgr.Instance.ApplicationShutdown);
+				}
+				if (err == ERROR_ID.NONE) err = ReadUserMoreInfo(brIn);
+				Legion.Instance.bLoaded = true;
+			}
+			callBack(err);
+			return err;
+		}
+		static ERROR_ID ReadUserMoreInfo(BinaryReader brIn)
+		{
+			return ERROR_ID.NONE;
+		}
+
+		public static ERROR_ID SetName(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE) Legion.Instance.sName = (string)obj1;
+			callBack(err);
+			return err;
+		}
+
+		public static ERROR_ID SelectCrew(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				err = ERROR_ID.NONE;
+			}
+			Legion.Instance.cBestCrew = (Crew)obj1;
+			callBack(err);
+			return err;
+		}
+	}
+
+	class CharacterHandler
+	{
+		public static ERROR_ID Create(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE) Legion.Instance.AddNewHero((Hero)obj1);
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID Retire(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				PopupManager.Instance.CloseLoadingPopup();
+				PopupManager.Instance.ShowOKPopup("서버와의 연결이 끈겼습니다. 앱을 종료합니다.", Server.ServerMgr.Instance.ApplicationShutdown);
+				return err;
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				Legion.Instance.RemoveHero((Hero)obj1);
+				Byte u1Count = brIn.ReadByte();
+				for (int i = 0; i < u1Count; i++)
+				{
+					UInt16 slot = brIn.ReadUInt16();
+					UInt16 itemid = brIn.ReadUInt16();
+					UInt16 count = brIn.ReadUInt16();
+					Legion.Instance.cInventory.AddItem(slot, itemid, count);
+				}
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID ResetStat(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE) ((Hero)obj1).GetComponent<StatusComponent>().ResetStatus();
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID PointStat(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				((Hero)obj1).GetComponent<StatusComponent>().DoPointingStatus();
+			}
+			else
+			{
+				((Hero)obj1).GetComponent<StatusComponent>().UndoPointingStatus();
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID ChangeEquip(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err != ERROR_ID.NONE) ((Hero)obj1).UndoChangingEquip();
+			callBack(err);
+			return err;
+		}
+	}
+
+	class CrewHandler
+	{
+		public static ERROR_ID Open(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				((Crew)obj1).UnLock();
+				if (Legion.Instance.cBestCrew == null) Legion.Instance.cBestCrew = (Crew)obj1;
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID OpenSlot(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				((Crew)obj1).abLocks[(Byte)obj2] = false;
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID Change(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				err = ERROR_ID.NONE;
+			}
+			if(err == ERROR_ID.NONE)
+			{
+				((Crew)obj1).DoChanging();
+			}
+			else
+			{
+				((Crew)obj1).UndoChanging();
+			}
+			callBack(err);
+			return err;
+		}
+	}
+
+	class ItemHandler
+	{
+		public static ERROR_ID ResetStat(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE) ((EquipmentItem)obj1).GetComponent<StatusComponent>().ResetStatus();
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID PointStat(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				((EquipmentItem)obj1).GetComponent<StatusComponent>().DoPointingStatus();
+			}
+			else
+			{
+				((EquipmentItem)obj1).GetComponent<StatusComponent>().UndoPointingStatus();
+			}
+			callBack(err);
+			return err;
+		}
+	}
+
+	class SkillHandler
+	{
+		public static ERROR_ID Open(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE) ((Hero)obj1).GetComponent<SkillComponent>().OpenSelectSlot((Byte)obj2);
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID Reset(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE) ((Hero)obj1).GetComponent<SkillComponent>().Reset();
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID Change(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				((Hero)obj1).GetComponent<SkillComponent>().DoPointingStatus();
+			}
+			else
+			{
+				((Hero)obj1).GetComponent<SkillComponent>().UndoPointingStatus();
+			}
+			callBack(err);
+			return err;
+		}
+	}
+
+	class StageHandler
+	{
+		public static ERROR_ID Start(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				PopupManager.Instance.CloseLoadingPopup();
+				PopupManager.Instance.ShowOKPopup("서버와의 연결이 끈겼습니다. 앱을 종료합니다.", Server.ServerMgr.Instance.ApplicationShutdown);
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				if (ServerMgr.bConnectToServer)
+				{
+					Byte u1Count = brIn.ReadByte();
+					Legion.Instance.cReward = new Reward((StageInfo)obj2);
+					for (Byte i = 0; i < u1Count; i++)
+					{
+						Byte u1Index = brIn.ReadByte();
+						Legion.Instance.cReward.AddNewRewardByIndex(u1Index);
+					}
+				}
+				else
+				{
+					Legion.Instance.cReward = new Reward((StageInfo)obj2);
+					Legion.Instance.cReward.AddNewRewardByIndex(0);
+				}
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID Result(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION) 
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE)
+			{// 결과화면에서 애니 여부에 따라서 추가 처리를 달리한다.
+				Debug.Log("핸들러 진입 성공");
+				if ((Byte)obj2 > 0)
+					Legion.Instance.cReward.PutIntoBag((Crew)obj1);
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID Dispatch(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				PopupManager.Instance.CloseLoadingPopup();
+				PopupManager.Instance.ShowOKPopup("서버와의 연결이 끈겼습니다. 앱을 종료합니다.", Server.ServerMgr.Instance.ApplicationShutdown);
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				Int64 s8ServerTime = brIn.ReadInt64();
+				((Crew)obj1).Dispatch((StageInfo)obj2, DateTime.FromBinary(s8ServerTime));
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID CancelDispatch(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				err = ERROR_ID.NONE;
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				((Crew)obj1).ClearDispatch();
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID GetDispatchResult(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				PopupManager.Instance.CloseLoadingPopup();
+				PopupManager.Instance.ShowOKPopup("서버와의 연결이 끈겼습니다. 앱을 종료합니다.", Server.ServerMgr.Instance.ApplicationShutdown);
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				if (ServerMgr.bConnectToServer)
+				{
+					Byte u1Count = brIn.ReadByte();
+					Legion.Instance.cReward = new Reward(((Crew)obj1).DispatchStage);
+					for (Byte i = 0; i < u1Count; i++)
+					{
+						Byte u1Index = brIn.ReadByte();
+						Legion.Instance.cReward.AddNewRewardByIndex(u1Index);
+					}
+					Legion.Instance.cReward.PutIntoBag((Crew)obj1);
+    				((Crew)obj1).ClearDispatch();
+				}
+				else
+				{
+					Legion.Instance.cReward = new Reward(((Crew)obj1).DispatchStage);
+					Legion.Instance.cReward.AddNewRewardByIndex(0);
+				}
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID FinishDispatch(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				PopupManager.Instance.CloseLoadingPopup();
+				PopupManager.Instance.ShowOKPopup("서버와의 연결이 끈겼습니다. 앱을 종료합니다.", Server.ServerMgr.Instance.ApplicationShutdown);
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				if (ServerMgr.bConnectToServer)
+				{
+					Byte u1Count = brIn.ReadByte();
+					Legion.Instance.cReward = new Reward(((Crew)obj1).DispatchStage);
+					for (Byte i = 0; i < u1Count; i++)
+					{
+						Byte u1Index = brIn.ReadByte();
+						Legion.Instance.cReward.AddNewRewardByIndex(u1Index);
+					}
+					Legion.Instance.cReward.PutIntoBag((Crew)obj1);
+    				((Crew)obj1).ClearDispatch();
+				}
+				else
+				{
+					Legion.Instance.cReward = new Reward(((Crew)obj1).DispatchStage);
+					Legion.Instance.cReward.AddNewRewardByIndex(0);
+				}
+			}
+			callBack(err);
+			return err;
+		}
+		public static ERROR_ID Sweep(ERROR_ID err, OnResponse callBack, BinaryReader brIn, System.Object obj1, System.Object obj2)
+		{
+			if (err == ERROR_ID.REQUEST_DUPLICATION)
+			{
+				PopupManager.Instance.CloseLoadingPopup();
+				PopupManager.Instance.ShowOKPopup("서버와의 연결이 끈겼습니다. 앱을 종료합니다.", Server.ServerMgr.Instance.ApplicationShutdown);
+			}
+			if (err == ERROR_ID.NONE)
+			{
+				if (ServerMgr.bConnectToServer)
+				{
+					Byte u1Count = brIn.ReadByte();
+					Legion.Instance.cReward = new Reward((StageInfo)obj1);
+					for (Byte i = 0; i < u1Count; i++)
+					{
+						Byte u1Index = brIn.ReadByte();
+						Legion.Instance.cReward.AddNewRewardByIndex(u1Index);
+					}
+					Legion.Instance.cReward.PutIntoBag(Legion.Instance.cBestCrew);
+				}
+				else
+				{
+					Legion.Instance.cReward = new Reward((StageInfo)obj1);
+					Legion.Instance.cReward.AddNewRewardByIndex(0);
+				}
+			}
+			callBack(err);
+			return err;
+		}
+	}
+}
