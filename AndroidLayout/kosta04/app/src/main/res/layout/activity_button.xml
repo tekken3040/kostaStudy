@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_Margin"
+    tools:context=".ButtonActivity">
+
+    <Button
+        android:id="@+id/btnTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/btn_selector"
+        android:text="@string/btnTop" />
+
+    <Button
+        android:id="@+id/btnBelow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnTop"
+        android:layout_alignParentLeft="true"
+
+        android:backgroundTint="@color/btn_color_selector"
+        android:text="@string/btnBottom"
+        android:textSize="@dimen/text_size" />
+</RelativeLayout>

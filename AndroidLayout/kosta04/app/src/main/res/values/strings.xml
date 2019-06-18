@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">네가지 버튼</string>
-    <string name="button1">네이트 검색</string>
-    <string name="button2">응급 전화</string>
-    <string name="button3">갤러리 보기</string>
-    <string name="button4">앱 종료</string>
+    <string name="app_name">나의 위젯들</string>
+    <string name="btnButton">버튼 위젯</string>
+    <string name="btnTextView">텍스트 위젯</string>
+    <string name="btnCheck">체크 위젯</string>
+    <string name="btnEdit">에딧트 입력 위젯</string>
+    <string name="btnTop">위버튼</string>
+    <string name="btnBottom">아래버튼</string>
 </resources>

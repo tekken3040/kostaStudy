@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_Margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="선택을 시작하겠습니까?"
+        android:textSize="@dimen/text_size" />
+
+    <CheckBox
+        android:id="@+id/checkStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="시작합니다"
+        android:textSize="@dimen/text_size" />
+
+    <LinearLayout
+        android:id="@+id/selectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="선택할 직업은?"
+            android:textSize="@dimen/text_size" />
+
+        <RadioGroup
+            android:id="@+id/rGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/btnArcher">
+
+            <RadioButton
+                android:id="@+id/btnArcher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="석궁사수"
+                android:textSize="@dimen/text_size" />
+
+            <RadioButton
+                android:id="@+id/btnVestal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="성직자"
+                android:textSize="@dimen/text_size" />
+
+            <RadioButton
+                android:id="@+id/btnDocter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="역병의사"
+                android:textSize="@dimen/text_size" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="선택 완료"
+            android:textSize="@dimen/text_size" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/archer" />
+
+    </LinearLayout>
+</LinearLayout>

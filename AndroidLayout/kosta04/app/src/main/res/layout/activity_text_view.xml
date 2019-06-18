@@ -5,30 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding="@dimen/activity_vertical_Margin">
+    tools:context=".TextViewActivity">
 
-    <Button
-        android:id="@+id/btnButton"
+    <TextView
+        android:id="@+id/txtMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnButton" />
+        android:text="TextView"
+        android:textSize="@dimen/text_size" />
 
     <Button
-        android:id="@+id/btnTextView"
+        android:id="@+id/btnSelection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnTextView" />
+        android:text="Selection"
+        android:textSize="@dimen/text_size" />
 
     <Button
-        android:id="@+id/btnCheck"
+        android:id="@+id/btnChange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnCheck" />
+        android:text="Change"
+        android:textSize="@dimen/text_size" />
 
-    <Button
-        android:id="@+id/btnEdit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btnEdit" />
 </LinearLayout>

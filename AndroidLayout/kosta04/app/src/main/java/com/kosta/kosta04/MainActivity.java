@@ -9,23 +9,53 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
 {
-    Button btnNate, btn119, btnGallery, btnExit;
+    Button btnButton, btnTextView, btnEdit, btnCheck;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnNate = (Button)findViewById(R.id.btnNate);
-        btn119 = (Button)findViewById(R.id.btn119);
-        btnGallery = (Button)findViewById(R.id.btnGallery);
-        btnExit = (Button)findViewById(R.id.btnExit);
-        btnNate.setOnClickListener(new View.OnClickListener()
+        btnButton = (Button)findViewById(R.id.btnButton);
+        btnButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Intent mIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://m.nate.com"));
+                Intent mIntent = new Intent(getApplicationContext(), ButtonActivity.class);
                 startActivity(mIntent);
+            }
+        });
+
+        btnCheck = (Button)findViewById(R.id.btnCheck);
+        btnCheck.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), CheckActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnEdit = (Button)findViewById(R.id.btnEdit);
+        btnEdit.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), EditActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnTextView = (Button)findViewById(R.id.btnTextView);
+        btnTextView.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), TextViewActivity.class);
+                startActivity(intent);
             }
         });
     }
