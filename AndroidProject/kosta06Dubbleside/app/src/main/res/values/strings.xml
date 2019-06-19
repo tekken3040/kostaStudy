@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">명화선호도투표</string>
+    <string name="btnResult">투표 종료</string>
+    <string name="btnReturn">돌아가기</string>
+    <string name="imageName1">독서하는 소녀</string>
+    <string name="imageName2">꽃장식 모자 소녀</string>
+    <string name="imageName3">부채를 든 소녀</string>
+    <string name="imageName4">이레트깡 단 베르양</string>
+    <string name="imageName5">잠자는 소녀</string>
+    <string name="imageName6">테라스의 두 자매</string>
+    <string name="imageName7">피아노 레슨</string>
+    <string name="imageName8">피아노 앞의 소녀</string>
+    <string name="imageName9">해변에서</string>
+</resources>

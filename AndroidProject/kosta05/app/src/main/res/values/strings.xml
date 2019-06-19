@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">단방향 액티비티 테스트</string>
+    <string name="btnNewActivity">새화면 열기</string>
+    <string name="btnReturnActivity">돌아가기</string>
+</resources>
