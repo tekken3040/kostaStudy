@@ -11,7 +11,7 @@
 #define ADRRESS "106.242.203.69"			//접속할 데이터베이스의 주소
 #define ACOUNT "LimeParfait"				//접속할 데이터베이스의 아이디
 #define PASSWORD "0000"						//접속할 데이터베이스의 비밀번호
-#define DATABASE "employees"				//접속할 데이터베이스의 이름
+#define DATABASE "GameDB"					//접속할 데이터베이스의 이름
 #define PORT 3315							//접속할 데이터베이스의 포트
 
 //========================================================================================
