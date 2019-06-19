@@ -91,6 +91,7 @@ int main(int argc,char** argv)
 		memset(&(PerIoData->overlapped),0,sizeof(OVERLAPPED));
 		PerIoData->wsaBuf.len = BUFSIZE;
 		PerIoData->wsaBuf.buf = PerIoData->buffer;
+
 		Flags = 0;
 
 		//클라이언트의 접속을 받아 클라이언트 소켓에 설정
