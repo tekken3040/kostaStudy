@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">kosta09</string>
+    <string name="btnLine">Line</string>
+    <string name="btnCircle">Circle</string>
+</resources>
