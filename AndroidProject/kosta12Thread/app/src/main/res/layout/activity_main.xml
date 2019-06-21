@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/btn_BasicTread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="기본 쓰레드" />
+
+    <Button
+        android:id="@+id/btn_BasicThread2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="기본 쓰레드-runnable" />
+
+    <Button
+        android:id="@+id/btn_PostThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/btn_LooperThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="루프 쓰레드" />
+
+    <Button
+        android:id="@+id/btn_ProgressThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download Progress" />
+
+    <Button
+        android:id="@+id/btn_ProgressPostThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prorgess Post" />
+
+    <Button
+        android:id="@+id/btn_TimeoutThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="타임아웃" />
+
+    <Button
+        android:id="@+id/btn_CountDownThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카운트다운" />
+
+    <Button
+        android:id="@+id/btn_AsyncTaskThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AsyncTask" />
+</LinearLayout>

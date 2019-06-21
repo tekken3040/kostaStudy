@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ProgressPostActivity">
+
+    <TextView
+        android:id="@+id/txtProgressPostResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="진행상황" />
+
+    <ProgressBar
+        android:id="@+id/progressPostDownloadBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnProgressPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="다운로드 시작" />
+</LinearLayout>
