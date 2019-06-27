@@ -3,6 +3,7 @@ package com.kosta.lec08sqlite;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -12,17 +13,20 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
-
-   TextView textView;
+public class MainActivity extends AppCompatActivity
+{
+    TextView textView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = (TextView)findViewById(R.id.textView);
     }
-    public void btnInsertMethod(View view){
+
+    public void btnInsertMethod(View view)
+    {
         DBHelper dbHelper = new DBHelper(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         String sql = "insert into TestTable " +
@@ -37,5 +41,36 @@ public class MainActivity extends AppCompatActivity {
         db.execSQL(sql,arg2);
         db.close();
         textView.setText("저장완료");
+    }
+
+    public void btnSelectMethod(View view)
+    {
+        DBHelper dbHelper = new DBHelper(this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String sql = "select * from TestTable order by idx desc limit 3 ";
+        Cursor cursor = db.rawQuery(sql, null);
+        textView.setText("");
+        while(cursor.moveToNext())
+        {
+            int idx_pos = cursor.getColumnIndex("idx");
+            int textData_pos = cursor.getColumnIndex("textData");
+            int intData_pos = cursor.getColumnIndex("intData");
+            int floatData_pos = cursor.getColumnIndex("floatData");
+            int dateData_pos = cursor.getColumnIndex("dateData");
+
+            int idx = cursor.getInt(idx_pos);
+            String textData = cursor.getString(textData_pos);
+            int intData = cursor.getInt(intData_pos);
+            double floatData = cursor.getFloat(floatData_pos);
+            String dateData = cursor.getString(dateData_pos);
+
+            textView.append("idx : " + idx + "\n");
+            textView.append("textData : " + textData + "\n");
+            textView.append("intData : " + intData + "\n");
+            textView.append("floatData : " + floatData + "\n");
+            textView.append("dateData : " + dateData + "\n");
+        }
+
+        db.close();
     }
 }

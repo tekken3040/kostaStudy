@@ -21,4 +21,10 @@
         android:layout_height="wrap_content"
         android:onClick="btnInsertMethod"
         android:text="Insert" />
+
+    <Button
+        android:id="@+id/btnSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select " />
 </LinearLayout>
