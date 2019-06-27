@@ -1,6 +1,6 @@
 ﻿  IOCPEchoServ_win.cpp
-C:\Users\kosta\Desktop\Project\IOCP_SERV\IOCP_SERV\IOCPEchoServ_win.cpp(52,16): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\kosta\Desktop\Project\IOCP_SERV\IOCP_SERV\IOCPEchoServ_win.cpp(87,80): warning C4311:  '형식 캐스트': 'LPPER_HANDLE_DATA'에서 'DWORD'(으)로 포인터가 잘립니다.
-C:\Users\kosta\Desktop\Project\IOCP_SERV\IOCP_SERV\IOCPEchoServ_win.cpp(87,80): warning C4302:  '형식 캐스트': 'LPPER_HANDLE_DATA'에서 'DWORD'(으)로 잘립니다.
-C:\Users\kosta\Desktop\Project\IOCP_SERV\IOCP_SERV\IOCPEchoServ_win.cpp(70,6): warning C4101:  'i' :참조되지 않은 지역 변수입니다.
-  IOCP_SERV.vcxproj -> C:\Users\kosta\Desktop\Project\IOCP_SERV\x64\Debug\IOCP_SERV.exe
+C:\GitHub\KostsaProject\IOCP_SERV\IOCP_SERV\IOCPEchoServ_win.cpp(52,16): warning C4018:  '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\GitHub\KostsaProject\IOCP_SERV\IOCP_SERV\IOCPEchoServ_win.cpp(87,80): warning C4311:  '형식 캐스트': 'LPPER_HANDLE_DATA'에서 'DWORD'(으)로 포인터가 잘립니다.
+C:\GitHub\KostsaProject\IOCP_SERV\IOCP_SERV\IOCPEchoServ_win.cpp(87,80): warning C4302:  '형식 캐스트': 'LPPER_HANDLE_DATA'에서 'DWORD'(으)로 잘립니다.
+C:\GitHub\KostsaProject\IOCP_SERV\IOCP_SERV\IOCPEchoServ_win.cpp(70,6): warning C4101:  'i' :참조되지 않은 지역 변수입니다.
+  IOCP_SERV.vcxproj -> C:\GitHub\KostsaProject\IOCP_SERV\x64\Debug\IOCP_SERV.exe

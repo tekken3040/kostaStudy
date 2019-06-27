@@ -54,8 +54,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\ClientManager.cs" />
-     <Compile Include="Assets\Script\PacketDefine.cs" />
      <Compile Include="Assets\Script\ReceiveButton.cs" />
+     <Compile Include="Assets\Script\Server\Base64String.cs" />
+     <Compile Include="Assets\Script\Server\Message.cs" />
+     <Compile Include="Assets\Script\Server\PacketDefine.cs" />
+     <Compile Include="Assets\Script\Server\ServerMgr.cs" />
      <Compile Include="Assets\Script\Singleton.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/GitHub/KostsaProject/SQLClient/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
@@ -278,6 +281,9 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>C:/GitHub/KostsaProject/SQLClient/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>C:/GitHub/KostsaProject/SQLClient/Assets/plugins/LitJson.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/2019.3.0a6/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

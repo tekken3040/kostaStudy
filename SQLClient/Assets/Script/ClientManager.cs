@@ -54,11 +54,6 @@ public class ClientManager : MonoBehaviour
         _textArea = textArea;
     }
 
-    void Update()
-    {
-        
-    }
-
     void OnApplicationQuit()
     {
         CleanUp();
