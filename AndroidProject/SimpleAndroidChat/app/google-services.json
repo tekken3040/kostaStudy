@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "962669709255",
+    "firebase_url": "https://androidchatsample-ab9f5.firebaseio.com",
+    "project_id": "androidchatsample-ab9f5",
+    "storage_bucket": "androidchatsample-ab9f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962669709255:android:41f4ca6ebc8ec680",
+        "android_client_info": {
+          "package_name": "com.example.simpleandroidchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962669709255-hhc0up8nfqdhq76e2n3du3m06e506t58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7UGIbSKE-c_7wtyGtZQLA25VlVmfGY3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962669709255-hhc0up8nfqdhq76e2n3du3m06e506t58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
