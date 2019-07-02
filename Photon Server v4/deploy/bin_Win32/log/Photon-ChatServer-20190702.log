@@ -1,0 +1,147 @@
+21988: 14:52:12.646 - ---
+21988: 14:52:12.646 - Service: "Photon Socket Server" starting
+21988: 14:52:12.646 - Config File: C:\Photon Server v4\deploy\bin_Win32\PhotonServer.config
+21988: 14:52:12.647 - Will produce at most: 10 crash dumps
+21988: 14:52:12.648 - Action: run as exe
+21988: 14:52:12.648 - Server Starting...
+21988: 14:52:12.648 -    Tick count: 73276953 (wraps in: 48.8622 days)
+21988: 14:52:12.648 - Tick count 64: 73276953
+21988: 14:52:12.648 - Photon Version: 4.1.28.2936
+21988: 14:52:12.648 - PID: 15100
+21988: 14:52:12.648 - Config File: C:\Photon Server v4\deploy\bin_Win32\PhotonServer.config
+21988: 14:52:12.648 - Will NOT log unimportant exceptions
+21988: 14:52:12.654 - Shutdown timeout enabled: 30000ms
+21988: 14:52:12.654 - Starting I/O thread pool with 2 threads
+21988: 14:52:12.654 - Using Standard allocator
+21988: 14:52:12.654 - Max message size: 512000
+21988: 14:52:12.654 - Starting business logic thread pool with the following settings
+21988: 14:52:12.654 - InitialThreads: 4 threads
+21988: 14:52:12.654 - MinThreads: 4 threads
+21988: 14:52:12.654 - Thread pool is fixed size
+21988: 14:52:12.655 - Starting ENet thread pool with the following settings
+21988: 14:52:12.655 - InitialThreads: 2 threads
+21988: 14:52:12.655 - MinThreads: 2 threads
+21988: 14:52:12.655 - Thread pool is fixed size
+21988: 14:52:12.655 - OnlyDispatchTimers: False
+21988: 14:52:12.655 - S2S: flow control: Max pending writes: 50
+21988: 14:52:12.655 - S2S: flow control: Max queued buffers: 200
+21988: 14:52:12.655 - S2S: flow control: Max pending writes MUX: 500
+21988: 14:52:12.655 - S2S: flow control: Max queued buffers MUX: 2000
+21988: 14:52:12.655 - S2S: MaxInboundMessageSize: 512000
+21988: 14:52:12.655 - S2S: MaxOutboundMessageSize: 512000
+21988: 14:52:12.655 - S2S: No inactivity timeout
+21988: 14:52:12.658 - WebSocket S2S: MaxInboundMessageSize: 512000
+21988: 14:52:12.658 - WebSocket S2S: MaxOutboundMessageSize: 512000
+21988: 14:52:12.658 - WebSocket S2S: No inactivity timeout
+21988: 14:52:12.658 - Max Reliable Data In Transit (awaiting ACKs) per peer : 16384 bytes
+21988: 14:52:12.658 - Per peer bandwidth limit
+21988: 14:52:12.658 - Transmit Rate Limit: 256 KB/Sec
+21988: 14:52:12.658 - Limit period: 200ms
+21988: 14:52:12.658 - Limit per period: 52428 bytes
+21988: 14:52:12.658 - Max queued data for transmission per peer: 163840 bytes
+21988: 14:52:12.658 - Minimum retransmit timeout: 200
+21988: 14:52:12.658 - No Maximum retransmit timeout
+21988: 14:52:12.658 - Minimum ENet timeout: 5000ms
+21988: 14:52:12.658 - Maximum ENet timeout: 30000ms
+21988: 14:52:12.658 - Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+21988: 14:52:12.658 - No RTT ACK adjustment timeout
+21988: 14:52:12.658 - Outbound ENet: MaxInboundMessageSize: 512000
+21988: 14:52:12.658 - Outbound ENet: MaxOutboundMessageSize: 512000
+21988: 14:52:12.659 - GetRuntime - About to load CLR - versions available:
+21988: 14:52:12.659 - v2.0.50727
+21988: 14:52:12.659 - v4.0.30319
+21988: 14:52:12.659 - Configuration requests: "v2.0.50727"
+21988: 14:52:12.659 - About to load version: "v2.0.50727"
+21988: 14:52:12.662 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+21988: 14:52:12.662 - CLRBaseDirectory set to "C:\Photon Server v4\deploy"
+21988: 14:52:12.662 - Optimising event broadcast for 20 or more peers
+21988: 14:52:12.662 - Start: About to load CLR - versions available:
+21988: 14:52:12.662 - v2.0.50727
+21988: 14:52:12.662 - v4.0.30319
+21988: 14:52:12.662 - No preference in configuration file, will load latest.
+21988: 14:52:12.662 - About to load version: "v4.0.30319"
+21988: 14:52:12.663 - Loaded version: "v4.0.30319"
+21988: 14:52:12.752 - Photon host runtime loaded
+21988: 14:52:14.239 - LICENSE: No license file was found. Starting with Bootstrap License.
+21988: 14:52:14.239 - License is valid.
+21988: 14:52:14.239 - Licensed for 20 concurrent connections.
+21988: 14:52:14.239 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 16384 bytes
+21988: 14:52:14.239 - ENet: Per peer bandwidth limit
+21988: 14:52:14.239 - ENet: Transmit Rate Limit: 256 KB/Sec
+21988: 14:52:14.239 - ENet: Limit period: 200ms
+21988: 14:52:14.239 - ENet: Limit per period: 52428 bytes
+21988: 14:52:14.239 - ENet: Max queued data for transmission per peer: 163840 bytes
+21988: 14:52:14.239 - ENet: Minimum retransmit timeout: 200
+21988: 14:52:14.239 - No Maximum retransmit timeout
+21988: 14:52:14.239 - ENet: Minimum timeout: 5000ms
+21988: 14:52:14.239 - ENet: Maximum timeout: 30000ms
+21988: 14:52:14.239 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+21988: 14:52:14.239 - No RTT ACK adjustment timeout
+21988: 14:52:14.239 - About to load application: ChatServer from ChatServer
+21988: 14:52:14.289 - Taking reference on default app domain
+21988: 14:52:14.301 - ChatServer:2 - Start() failed.
+Exception:
+System.TypeLoadException: Failed to create object "ChatServer" from assembly "ChatServer".
+   위치: PhotonHostRuntime.PhotonDomainManager.PhotonPlainAppDomainBehavior.Start(String assemblyName, String typeName, String instanceName, String applicationName, IPhotonApplicationSink sink, ILogToUnmanagedLog logger, IControlListeners listenerControl)
+   위치: PhotonHostRuntime.PhotonDomainManager.Start(String assemblyName, String typeName, String instanceName, String applicationName, IPhotonApplicationSink sink, ILogToUnmanagedLog logger, IControlListeners listenerControl)
+21988: 14:52:14.301 - ChatServer:2 - Stop() failed.
+Exception:
+System.Exception: Stop: unable to call the Application.TearDown() - undefined photonControl.
+   위치: PhotonHostRuntime.PhotonDomainManager.PhotonPlainAppDomainBehavior.Stop()
+   위치: PhotonHostRuntime.PhotonDomainManager.Stop()
+21988: 14:52:14.301 - ERROR: Failed to start application: "ChatServer" in app domain: 2
+1112: 14:52:14.301 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+21988: 14:52:14.301 - CService::OnException() - Exception: CManagedHost::StartApplication() - Failed to start application in AppDomain: 2 - Failed to create object "ChatServer" from assembly "ChatServer".
+21988: 14:52:14.301 - Server shutting down...
+21988: 14:52:14.301 - Shutdown monitoring enabled, 30000ms before process abort
+21988: 14:52:14.301 - Notifying CLR applications of shutdown...
+21988: 14:52:14.301 - RequestStop: defalt app domain
+14420: 14:52:14.304 - Unloading Domain: ApplicationName = 'ChatServer', DomainId='2'
+1112: 14:52:14.304 - CManagedHost::OnDomainUnload() - 2
+21988: 14:52:14.305 - Shutting down WebSocket Outbound Connection Manager...
+21988: 14:52:14.305 - Shutting down TCP Outbound Connection Manager...
+21988: 14:52:14.305 - Shutting down ENet Outbound Connection Manager...
+21988: 14:52:14.305 - Disconnecting all outbound peers...
+21988: 14:52:14.305 - Shutting down ENet host...
+21988: 14:52:14.305 - Disconnecting all peers...
+21988: 14:52:14.305 - Shutting down socket servers...
+21988: 14:52:14.305 - Shutting down ENet thread pool...
+21988: 14:52:14.305 - Shutting down TCP inactivity timers...
+21988: 14:52:14.305 - Shutting down CLR applications...
+21988: 14:52:14.305 - Shutting down business logic thread pool...
+21988: 14:52:14.305 - Shutting down I/O thread pool...
+21988: 14:52:14.305 - Destroying servers
+21988: 14:52:14.305 - Destroying WebSocket Outbound Connection Manager
+21988: 14:52:14.305 - Destroying TCP Outbound Connection Manager
+21988: 14:52:14.305 - Destroying TCP inactivity timer
+21988: 14:52:14.305 - Destroying ENet timer wheel
+21988: 14:52:14.305 - Destroying ENet host
+21988: 14:52:14.305 - Destroying ENet outbound host
+21988: 14:52:14.305 - Destroying HTTP inactivity timer
+21988: 14:52:14.305 - Destroying HTTP host
+21988: 14:52:14.305 - Destroying HTTP Chunk host
+21988: 14:52:14.305 - Flushing ENET buffer allocator...
+21988: 14:52:14.305 - Flushing TCP buffer handle allocator...
+21988: 14:52:14.305 - Flushing stream socket allocator...
+21988: 14:52:14.305 - Flushing inbound datagram socket allocator...
+21988: 14:52:14.305 - Flushing outbound datagram socket allocator...
+21988: 14:52:14.305 - Destroying CLR dispatcher
+21988: 14:52:14.305 - Destroying CLR applications
+21988: 14:52:14.305 - ~CCLRApplicationCollection() - Waiting up to 10 seconds for the CLR to release all of our objects
+21988: 14:52:14.306 - ~CCLRApplicationCollection() - Done. All objects released
+21988: 14:52:14.306 - ~CManagedHost() - Release default app domain
+21988: 14:52:14.306 - CManagedHost::OnDomainUnload() - 1
+21988: 14:52:14.306 - ~CManagedHost() - Waiting up to 10 seconds for CLR shutdown...
+21988: 14:52:14.306 - ~CManagedHost
+21988: 14:52:14.306 - Destroying ENet thread pool
+21988: 14:52:14.306 - Destroying Business logic thread pool
+21988: 14:52:14.306 - Destroying I/O thread pool
+21988: 14:52:14.306 - Destroying ENet buffer allocator
+21988: 14:52:14.306 - Destroying TCP buffer allocator
+21988: 14:52:14.306 - Destroying TCP socket allocator
+21988: 14:52:14.306 - Destroying ENet inbound socket allocator
+21988: 14:52:14.306 - Destroying ENet outbound socket allocator
+21988: 14:52:14.306 - Destroying shared datagram flow control data
+21988: 14:52:14.306 - Shutdown complete...
+21988: 14:52:14.306 - Service shutting down: failed to start application. Errorcode: 108
+21988: 14:52:14.308 - Service shut down complete

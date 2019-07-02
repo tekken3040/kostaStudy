@@ -1,0 +1,17 @@
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\ChatServer.deps.json
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\ChatServer.dll
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\ChatServer.pdb
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\ExitGamesLibs.dll
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\Photon.SocketServer.dll
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\PhotonHostRuntimeInterfaces.dll
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\ExitGamesLibs.pdb
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\ExitGamesLibs.xml
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\Photon.SocketServer.pdb
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\Photon.SocketServer.xml
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\bin\Release\netstandard2.0\Photon.SocketServer.dll.config
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\obj\Release\netstandard2.0\ChatServer.csproj.CoreCompileInputs.cache
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\obj\Release\netstandard2.0\ChatServer.AssemblyInfoInputs.cache
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\obj\Release\netstandard2.0\ChatServer.AssemblyInfo.cs
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\obj\Release\netstandard2.0\ChatServer.csproj.CopyComplete
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\obj\Release\netstandard2.0\ChatServer.dll
+C:\Photon Server v4\src-server\SimplePhotonServer\ChatServer\obj\Release\netstandard2.0\ChatServer.pdb

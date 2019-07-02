@@ -1,0 +1,17 @@
+2019-07-02 14:52:12,738 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-02 14:52:12,749 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-02 14:52:12,753 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-02 14:52:13,012 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: No license file was found - starting with Bootstrap License.
+2019-07-02 14:52:13,015 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Expiration: never; floating license: no; max connections: 20; valid IPs: any
+2019-07-02 14:52:14,242 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-02 14:52:14,246 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\Photon Server v4\deploy'
+2019-07-02 14:52:14,248 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\Photon Server v4\deploy\ChatServer\bin;bin_Win32;Shared;'
+2019-07-02 14:52:14,251 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-02 14:52:14,253 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-02 14:52:14,277 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\Photon Server v4\deploy\ChatServer'
+2019-07-02 14:52:14,280 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\Photon Server v4\deploy\ChatServer\bin'
+2019-07-02 14:52:14,283 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\Photon Server v4\deploy'
+2019-07-02 14:52:14,286 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\Photon Server v4\deploy\bin_Win32\log'
+2019-07-02 14:52:14,292 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-02 14:52:14,296 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-02 14:52:14,302 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'

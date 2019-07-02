@@ -1,0 +1,12 @@
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\bin\Debug\ChatClient.exe.config
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\bin\Debug\ChatClient.exe
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\bin\Debug\ChatClient.pdb
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\bin\Debug\Photon3DotNet.dll
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\bin\Debug\websocket-sharp.dll
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\bin\Debug\Photon3DotNet.pdb
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\bin\Debug\Photon3DotNet.xml
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\obj\Debug\ChatClient.csprojAssemblyReference.cache
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\obj\Debug\ChatClient.csproj.CoreCompileInputs.cache
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\obj\Debug\ChatClient.csproj.CopyComplete
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\obj\Debug\ChatClient.exe
+C:\Photon Server v4\src-server\SimplePhotonClient\ChatClient\obj\Debug\ChatClient.pdb

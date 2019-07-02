@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,9 +44,6 @@ public class chatLobby extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                if (user_chat.getText().toString().equals(""))
-                    return;
-
                 Intent intent = new Intent(chatLobby.this, chatRoom.class);
                 intent.putExtra("chatName", user_chat.getText().toString());
                 intent.putExtra("userName", getLoginIntent.getStringExtra("chatName"));
@@ -61,7 +59,17 @@ public class chatLobby extends AppCompatActivity
         // 리스트 어댑터 생성 및 세팅
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1);
         chat_list.setAdapter(adapter);
-
+        chat_list.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView,View view,int i,long l)
+            {
+                Intent intent = new Intent(chatLobby.this, chatRoom.class);
+                intent.putExtra("chatName", adapter.getItem(i));
+                intent.putExtra("userName", getIntent().getStringExtra("chatName"));
+                startActivity(intent);
+            }
+        });
         // 데이터 받아오기 및 어댑터 데이터 추가 및 삭제 등..리스너 관리
         databaseReference.child("chat").addChildEventListener(new ChildEventListener()
         {
