@@ -22,13 +22,13 @@ namespace ChatServer
 
     public class ChatPeer : ClientPeer
     {
-        public ChatPeer(InitRequest initRequest)
-            : base(initRequest)
+        private static event Action<ChatPeer, EventData, SendParameters> BroadcastMessage;
+
+        public ChatPeer(InitRequest initRequest) : base(initRequest)
         {
             BroadcastMessage += OnBroadcastMessage;
         }
-        private static event Action<ChatPeer, EventData, SendParameters> BroadcastMessage;
-
+        
         protected override void OnDisconnect(DisconnectReason disconnectCode, string reasonDetail)
         {
             BroadcastMessage -= OnBroadcastMessage;
