@@ -27,6 +27,7 @@ public class join extends AppCompatActivity
     Button btnJoinOk, btnJoinCancel;
     String mobile_ID, mobile_Name, mobile_Password;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

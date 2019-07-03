@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotonPathCreate", "PhotonPathCreate\PhotonPathCreate.csproj", "{477BADAB-DB12-43E9-A22B-D6CE0A230EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotonPathClose", "PhotonPathClose\PhotonPathClose.csproj", "{C6EE0021-3650-4708-94D1-E67F70B4CE4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{477BADAB-DB12-43E9-A22B-D6CE0A230EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{477BADAB-DB12-43E9-A22B-D6CE0A230EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{477BADAB-DB12-43E9-A22B-D6CE0A230EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{477BADAB-DB12-43E9-A22B-D6CE0A230EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6EE0021-3650-4708-94D1-E67F70B4CE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6EE0021-3650-4708-94D1-E67F70B4CE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6EE0021-3650-4708-94D1-E67F70B4CE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6EE0021-3650-4708-94D1-E67F70B4CE4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {577AB2B0-314B-4F81-953B-8B37F805F283}
+	EndGlobalSection
+EndGlobal
