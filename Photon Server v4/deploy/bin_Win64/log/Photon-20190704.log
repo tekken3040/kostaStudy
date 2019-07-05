@@ -1,0 +1,30 @@
+11656: 18:52:13.738 - ---
+11656: 18:52:13.738 - Service: "Photon Socket Server" starting
+11656: 18:52:13.738 - Config File: C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\PhotonServer.config
+11656: 18:52:13.740 - Will produce at most: 10 crash dumps
+11656: 18:52:13.740 - Service shutting down
+11656: 18:52:13.741 - Service shut down complete
+8732: 18:56:19.493 - ---
+8732: 18:56:19.493 - Service: "Photon Socket Server" starting
+8732: 18:56:19.493 - Config File: C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\PhotonServer.config
+8732: 18:56:19.495 - Will produce at most: 10 crash dumps
+8732: 18:56:19.495 - Service shutting down
+8732: 18:56:19.497 - Service shut down complete
+6864: 18:56:59.867 - ---
+6864: 18:56:59.867 - Service: "Photon Socket Server" starting
+6864: 18:56:59.867 - Config File: C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\PhotonServer.config
+6864: 18:56:59.869 - Will produce at most: 10 crash dumps
+6864: 18:56:59.869 - Service shutting down
+6864: 18:56:59.873 - Service shut down complete
+9056: 19:01:20.654 - ---
+9056: 19:01:20.654 - Service: "Photon Socket Server" starting
+9056: 19:01:20.654 - Config File: C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\PhotonServer.config
+9056: 19:01:20.656 - Will produce at most: 10 crash dumps
+9056: 19:01:20.656 - Service shutting down
+9056: 19:01:20.660 - Service shut down complete
+12256: 19:21:32.960 - ---
+12256: 19:21:32.960 - Service: "Photon Socket Server" starting
+12256: 19:21:32.961 - Config File: C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\PhotonServer.config
+12256: 19:21:32.962 - Will produce at most: 10 crash dumps
+12256: 19:21:32.962 - Service shutting down
+12256: 19:21:32.963 - Service shut down complete

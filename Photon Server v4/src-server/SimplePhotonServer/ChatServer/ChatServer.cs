@@ -1,8 +1,11 @@
 ﻿using System;
+using System.IO;
 using Photon.SocketServer;
 using PhotonHostRuntimeInterfaces;
+using Server;
+using System.Collections.Generic;
 
-namespace ChatServer
+namespace Server
 {
     public class ChatServer : ApplicationBase
     {
@@ -13,6 +16,7 @@ namespace ChatServer
 
         protected override void Setup()
         {
+            //System.Diagnostics.Debugger.Launch();
         }
 
         protected override void TearDown()
@@ -40,10 +44,40 @@ namespace ChatServer
         //요청 수행
         protected override void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters)
         {
-            if (operationRequest.OperationCode == 1) // 요청 코드가 1인경우
+            
+            switch(operationRequest.OperationCode)
+            {
+                case (Byte)PacketDefine.MSGs.CREATE_CARD:
+                    /*
+                    var response = new OperationResponse
+                    {
+                        OperationCode = operationRequest.OperationCode,
+                        ReturnCode = 0,
+                        DebugMessage = "OK",
+                        Parameters = new Dictionary<byte, object> { {operationRequest.OperationCode, operationRequest.Parameters} }
+                    };
+                    */
+                    var eventData = new EventData((Byte)PacketDefine.MSGs.CREATE_CARD)// Chat Custom Event Code = 1
+                    {
+                        Parameters = operationRequest.Parameters
+                    };
+                    BroadcastMessage(this, eventData, sendParameters);
+                    //this.SendOperationResponse(response, sendParameters);
+                    var response = new OperationResponse
+                    {
+                        OperationCode = operationRequest.OperationCode,
+                        ReturnCode = 0,
+                        DebugMessage = "OK",
+                        Parameters = new Dictionary<byte, object> { { operationRequest.OperationCode, operationRequest.Parameters } }
+                    };
+                    this.SendOperationResponse(response, sendParameters);
+                    break;
+            } 
+            
+            if (operationRequest.OperationCode.Equals((Byte)PacketDefine.MSGs.CREATE_CARD)) // 요청 코드가 1인경우
             {
                 // broadcast chat custom event to other peers
-                var eventData = new EventData(1)// Chat Custom Event Code = 1
+                var eventData = new EventData((Byte)PacketDefine.MSGs.CREATE_CARD)// Chat Custom Event Code = 1
                 {
                     Parameters = operationRequest.Parameters
                 }; 
@@ -52,6 +86,7 @@ namespace ChatServer
                 var response = new OperationResponse(operationRequest.OperationCode);
                 SendOperationResponse(response, sendParameters);
             }
+            
         }
 
         private void OnBroadcastMessage(ChatPeer peer, EventData eventData, SendParameters sendParameters)

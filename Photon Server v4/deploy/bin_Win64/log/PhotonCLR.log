@@ -59,3 +59,400 @@
 2019-07-03 18:44:53,332 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
 2019-07-03 18:44:53,345 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
 2019-07-03 18:45:12,326 [12] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-04 15:21:09,179 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-04 15:21:09,197 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-04 15:21:09,202 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-04 15:21:09,583 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-04 15:21:10,809 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-04 15:21:10,815 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 15:21:10,817 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-04 15:21:10,821 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-04 15:21:10,825 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-04 15:21:10,856 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-04 15:21:10,860 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-04 15:21:10,865 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 15:21:10,868 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-04 15:21:10,875 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-04 15:21:10,879 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-04 15:21:10,906 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-04 15:21:10,912 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-04 15:21:10,925 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-04 15:21:10,932 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-04 15:21:10,946 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 15:21:18,738 [15] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-04 18:52:13,742 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 18:52:56,143 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-04 18:52:56,172 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-04 18:52:56,191 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-04 18:52:56,601 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-04 18:52:57,906 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-04 18:52:57,911 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 18:52:57,916 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-04 18:52:57,922 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-04 18:52:57,927 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-04 18:52:57,964 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-04 18:52:57,970 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-04 18:52:57,975 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 18:52:57,980 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-04 18:52:57,988 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-04 18:52:57,993 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-04 18:52:58,000 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-04 18:52:58,009 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-04 18:52:58,018 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-04 18:52:58,027 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-04 18:52:58,038 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 18:53:16,369 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-04 18:56:19,488 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.OnStopRequested()
+2019-07-04 18:56:19,495 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 18:56:19,502 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Stop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.TearDown()
+2019-07-04 18:56:53,397 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-04 18:56:53,432 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-04 18:56:53,447 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-04 18:56:53,810 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-04 18:56:55,086 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-04 18:56:55,091 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 18:56:55,096 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-04 18:56:55,101 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-04 18:56:55,107 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-04 18:56:55,149 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-04 18:56:55,154 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-04 18:56:55,159 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 18:56:55,167 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-04 18:56:55,175 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-04 18:56:55,180 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-04 18:56:55,186 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-04 18:56:55,192 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-04 18:56:55,200 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-04 18:56:55,210 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-04 18:56:55,227 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 18:56:59,860 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.OnStopRequested()
+2019-07-04 18:56:59,868 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 18:56:59,876 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Stop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.TearDown()
+2019-07-04 18:57:09,540 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-04 18:57:09,559 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-04 18:57:09,565 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-04 18:57:09,918 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-04 18:57:11,185 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-04 18:57:11,190 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 18:57:11,195 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-04 18:57:11,197 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-04 18:57:11,201 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-04 18:57:11,237 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-04 18:57:11,242 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-04 18:57:11,246 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 18:57:11,251 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-04 18:57:11,259 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-04 18:57:11,264 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-04 18:57:11,271 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-04 18:57:11,278 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-04 18:57:11,285 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-04 18:57:11,294 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-04 18:57:11,306 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 18:58:17,695 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.OnStopRequested()
+2019-07-04 18:58:17,701 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 18:58:17,708 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Stop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.TearDown()
+2019-07-04 18:58:26,295 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-04 18:58:26,315 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-04 18:58:26,323 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-04 18:58:26,738 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-04 18:58:28,067 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-04 18:58:28,072 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 18:58:28,076 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-04 18:58:28,081 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-04 18:58:28,085 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-04 18:58:28,121 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-04 18:58:28,126 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-04 18:58:28,131 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 18:58:28,136 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-04 18:58:28,144 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-04 18:58:28,149 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-04 18:58:28,156 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-04 18:58:28,163 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-04 18:58:28,172 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-04 18:58:28,181 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-04 18:58:28,195 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 18:59:19,151 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-04 19:01:20,648 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.OnStopRequested()
+2019-07-04 19:01:20,654 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 19:01:20,662 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Stop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.TearDown()
+2019-07-04 19:01:35,672 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-04 19:01:35,706 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-04 19:01:35,724 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-04 19:01:36,065 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-04 19:01:37,388 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-04 19:01:37,394 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 19:01:37,400 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-04 19:01:37,406 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-04 19:01:37,411 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-04 19:01:37,451 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-04 19:01:37,460 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-04 19:01:37,466 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-04 19:01:37,470 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-04 19:01:37,479 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-04 19:01:37,484 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-04 19:01:37,490 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-04 19:01:37,496 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-04 19:01:37,504 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-04 19:01:37,512 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-04 19:01:37,526 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-04 19:02:36,870 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-04 19:02:55,680 [11] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Microsoft.VisualStudio.Debugger.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a from file:///C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/Remote Debugger/x64/Runtime/Microsoft.VisualStudio.Debugger.Runtime.dll
+2019-07-04 19:21:32,959 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 09:35:33,958 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 09:35:33,975 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 09:35:33,980 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 09:35:34,367 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 09:35:35,617 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 09:35:35,622 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 09:35:35,626 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 09:35:35,629 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 09:35:35,633 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 09:35:35,671 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 09:35:35,676 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 09:35:35,680 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 09:35:35,684 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 09:35:35,710 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 09:35:35,715 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 09:35:35,748 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 09:35:35,774 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 09:35:35,785 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 09:35:35,793 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 09:35:35,808 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 09:36:29,384 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 10:23:52,807 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 10:24:47,727 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 10:24:47,742 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 10:24:47,748 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 10:24:48,075 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 10:24:49,414 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 10:24:49,418 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 10:24:49,422 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 10:24:49,425 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 10:24:49,428 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 10:24:49,459 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 10:24:49,464 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 10:24:49,468 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 10:24:49,473 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 10:24:49,480 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 10:24:49,485 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 10:24:49,492 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 10:24:49,499 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 10:24:49,505 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 10:24:49,513 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 10:24:49,525 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 10:25:18,744 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 10:31:52,341 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 10:48:21,483 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 10:48:21,500 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 10:48:21,505 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 10:48:21,852 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 10:48:23,115 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 10:48:23,119 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 10:48:23,123 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 10:48:23,127 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 10:48:23,131 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 10:48:23,161 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 10:48:23,166 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 10:48:23,170 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 10:48:23,173 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 10:48:23,180 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 10:48:23,185 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 10:48:23,189 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 10:48:23,195 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 10:48:23,202 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 10:48:23,209 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 10:48:23,221 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 10:48:24,986 [11] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 10:49:00,151 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.OnStopRequested()
+2019-07-05 10:49:00,156 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 10:49:00,162 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Stop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.TearDown()
+2019-07-05 10:56:57,222 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 10:56:57,239 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 10:56:57,245 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 10:56:57,605 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 10:56:58,844 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 10:56:58,848 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 10:56:58,852 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 10:56:58,855 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 10:56:58,859 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 10:56:58,887 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 10:56:58,891 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 10:56:58,895 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 10:56:58,898 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 10:56:58,906 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 10:56:58,909 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 10:56:58,914 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 10:56:58,919 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 10:56:58,925 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 10:56:58,932 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 10:56:58,937 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 10:57:18,185 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Microsoft.VisualStudio.Debugger.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a from file:///C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/Remote Debugger/x64/Runtime/Microsoft.VisualStudio.Debugger.Runtime.dll
+2019-07-05 10:57:30,281 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 10:57:39,371 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.OnStopRequested()
+2019-07-05 10:57:39,376 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 10:57:39,381 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Stop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.TearDown()
+2019-07-05 10:57:43,502 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 10:57:43,517 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 10:57:43,522 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 10:57:43,844 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 10:57:45,078 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 10:57:45,082 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 10:57:45,086 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 10:57:45,090 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 10:57:45,093 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 10:57:45,122 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 10:57:45,126 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 10:57:45,130 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 10:57:45,134 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 10:57:45,141 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 10:57:45,144 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 10:57:45,150 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 10:57:45,154 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 10:57:45,160 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 10:57:45,168 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 10:57:45,173 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 10:57:59,545 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 10:58:03,551 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.OnStopRequested()
+2019-07-05 10:58:03,555 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 10:58:03,560 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Stop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.TearDown()
+2019-07-05 11:16:12,661 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 11:16:12,679 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 11:16:12,686 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 11:16:13,057 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 11:16:14,336 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 11:16:14,340 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 11:16:14,344 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 11:16:14,347 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 11:16:14,352 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 11:16:14,381 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 11:16:14,386 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 11:16:14,389 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 11:16:14,393 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 11:16:14,401 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 11:16:14,406 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 11:16:14,440 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 11:16:14,445 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 11:16:14,451 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 11:16:14,459 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 11:16:14,469 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 11:16:20,740 [14] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 11:16:40,012 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Microsoft.VisualStudio.Debugger.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a from file:///C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/Remote Debugger/x64/Runtime/Microsoft.VisualStudio.Debugger.Runtime.dll
+2019-07-05 11:18:34,265 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.OnStopRequested()
+2019-07-05 11:18:34,270 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 11:18:34,275 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Stop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.TearDown()
+2019-07-05 11:18:42,239 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 11:18:42,254 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 11:18:42,259 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 11:18:42,578 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 11:18:43,838 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 11:18:43,842 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 11:18:43,846 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 11:18:43,849 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 11:18:43,854 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 11:18:43,883 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 11:18:43,888 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 11:18:43,891 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 11:18:43,895 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 11:18:43,902 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 11:18:43,906 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 11:18:43,911 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 11:18:43,916 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 11:18:43,923 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 11:18:43,930 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 11:18:43,941 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 11:18:58,184 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 11:19:00,182 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Microsoft.VisualStudio.Debugger.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a from file:///C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/Remote Debugger/x64/Runtime/Microsoft.VisualStudio.Debugger.Runtime.dll
+2019-07-05 12:55:27,159 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 12:55:42,623 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 12:55:42,642 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 12:55:42,647 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 12:55:43,043 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 12:55:44,404 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 12:55:44,409 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 12:55:44,412 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 12:55:44,416 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 12:55:44,420 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 12:55:44,452 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 12:55:44,457 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 12:55:44,461 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 12:55:44,465 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 12:55:44,473 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 12:55:44,477 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 12:55:44,482 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 12:55:44,490 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 12:55:44,498 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 12:55:44,506 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 12:55:44,517 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 12:55:48,200 [12] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 12:57:36,126 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Microsoft.VisualStudio.Debugger.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a from file:///C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/Remote Debugger/x64/Runtime/Microsoft.VisualStudio.Debugger.Runtime.dll
+2019-07-05 14:23:46,539 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 14:24:00,432 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 14:24:00,447 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 14:24:00,452 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 14:24:00,874 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 14:24:02,187 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 14:24:02,192 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 14:24:02,195 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 14:24:02,198 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 14:24:02,202 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 14:24:02,233 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 14:24:02,237 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 14:24:02,241 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 14:24:02,245 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 14:24:02,252 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 14:24:02,257 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 14:24:02,262 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 14:24:02,268 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 14:24:02,274 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 14:24:02,282 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 14:24:02,294 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 14:24:07,394 [12] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 14:40:00,088 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 14:40:12,124 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 14:40:12,140 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 14:40:12,146 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 14:40:12,563 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 14:40:13,885 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 14:40:13,889 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 14:40:13,893 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 14:40:13,897 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 14:40:13,901 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 14:40:13,938 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 14:40:13,942 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 14:40:13,947 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 14:40:13,951 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 14:40:13,960 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 14:40:13,965 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 14:40:13,970 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 14:40:13,975 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 14:40:13,982 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 14:40:13,990 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 14:40:14,000 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 14:40:16,953 [12] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 14:42:49,081 [11] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Microsoft.VisualStudio.Debugger.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a from file:///C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/Remote Debugger/x64/Runtime/Microsoft.VisualStudio.Debugger.Runtime.dll
+2019-07-05 14:43:22,161 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.OnStopRequested()
+2019-07-05 14:43:22,167 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 14:43:22,173 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Stop: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.TearDown()
+2019-07-05 14:43:34,174 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-05 14:43:34,190 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-05 14:43:34,196 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-05 14:43:34,592 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-05 14:43:35,863 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-05 14:43:35,868 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 14:43:35,872 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-05 14:43:35,873 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-05 14:43:35,878 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-05 14:43:35,906 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-05 14:43:35,910 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-05 14:43:35,914 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-05 14:43:35,919 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-05 14:43:35,926 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-05 14:43:35,932 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-05 14:43:35,938 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-05 14:43:35,945 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-05 14:43:35,951 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-05 14:43:35,959 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-05 14:43:35,969 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-05 14:43:47,479 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-05 14:43:52,448 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Microsoft.VisualStudio.Debugger.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a from file:///C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/Remote Debugger/x64/Runtime/Microsoft.VisualStudio.Debugger.Runtime.dll
+2019-07-05 17:46:08,145 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
