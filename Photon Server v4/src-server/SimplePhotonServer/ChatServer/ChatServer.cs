@@ -73,7 +73,7 @@ namespace Server
                     this.SendOperationResponse(response, sendParameters);
                     break;
             } 
-            
+            /*
             if (operationRequest.OperationCode.Equals((Byte)PacketDefine.MSGs.CREATE_CARD)) // 요청 코드가 1인경우
             {
                 // broadcast chat custom event to other peers
@@ -86,7 +86,7 @@ namespace Server
                 var response = new OperationResponse(operationRequest.OperationCode);
                 SendOperationResponse(response, sendParameters);
             }
-            
+            */
         }
 
         private void OnBroadcastMessage(ChatPeer peer, EventData eventData, SendParameters sendParameters)

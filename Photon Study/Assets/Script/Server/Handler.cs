@@ -4,6 +4,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text;
 
 namespace Server
 {
@@ -43,17 +44,17 @@ namespace Server
                     data = newDict[u1Key];
                     
                     MemoryStream memBuf = new MemoryStream(data);
-                    BinaryReader brln = new BinaryReader(memBuf);
+                    BinaryReader brln = new BinaryReader(memBuf, Encoding.Unicode);
                     CARD_INIT cardInit = new CARD_INIT();
+                    brln.BaseStream.Position = 0;
+                    brln.ReadByte();
                     cardInit.bAura = brln.ReadBoolean();
                     cardInit.frameName = brln.ReadString();
                     cardInit.imgName = brln.ReadString();
                     cardInit.u1Count = brln.ReadByte();
-                    Debug.Log(cardInit.bAura);
-                    Debug.Log(cardInit.frameName);
-                    Debug.Log(cardInit.imgName);
-                    Debug.Log(cardInit.u1Count);
-                    //OnResponse _callback = OnResponse.CreateDelegate(ERROR_ID, SimplePhotonChat, brln.ReadString());
+                    //cardInit.callback
+                    //SimplePhotonChat simplePhotonChat = new SimplePhotonChat();
+                    //OnResponse _callback = OnResponse.CreateDelegate(ERROR_ID.NONE, simplePhotonChat, brln.ReadString());
 
                     //cardInit.callback = 
                     //(CARD_INIT)operationResponse.Parameters[operationResponse.OperationCode];

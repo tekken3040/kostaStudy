@@ -36,11 +36,24 @@ public class SimplePhotonChat : MonoBehaviour
     {
         MemoryStream m = new MemoryStream(10000);
         BinaryWriter bwOut = new BinaryWriter(m, Encoding.Unicode);
+        PacketHeader.Set(bwOut, MSGs.CREATE_CARD);
         bwOut.Write(1);
         bwOut.Write(false);
         bwOut.Write("CardDesign");
         bwOut.Write("AnimatedArmor");
-        for(int i=0; i<m.ToArray().Length; i++)
-            Debug.Log(m.ToArray().GetValue(i).ToString());
+        BinaryReader br = new BinaryReader(m, Encoding.Unicode);
+        br.BaseStream.Position = 0;
+        br.ReadByte().ToString();
+
+        CARD_INIT card = new CARD_INIT();
+        card.u1Count = br.ReadByte();
+        card.bAura = br.ReadBoolean();
+        card.frameName = br.ReadString();
+        card.imgName = br.ReadString();
+
+        Debug.Log(card.u1Count);
+        Debug.Log(card.bAura);
+        Debug.Log(card.frameName);
+        Debug.Log(card.imgName);
     }
 }

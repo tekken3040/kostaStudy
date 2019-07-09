@@ -1,0 +1,234 @@
+19376: 17:03:40.221 - ---
+19376: 17:03:40.221 - Service: "Photon Socket Server" starting
+19376: 17:03:40.221 - Config File: C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\PhotonServer.config
+19376: 17:03:40.224 - Will produce at most: 10 crash dumps
+19376: 17:03:40.224 - Action: run as exe
+19376: 17:03:40.226 - Server Starting...
+19376: 17:03:40.226 -    Tick count: 540560171 (wraps in: 43.4538 days)
+19376: 17:03:40.227 - Tick count 64: 540560171
+19376: 17:03:40.227 - Photon Version: 4.0.28.2962
+19376: 17:03:40.227 - PID: 25756
+19376: 17:03:40.227 - Config File: C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\PhotonServer.config
+19376: 17:03:40.227 - Will NOT log unimportant exceptions
+19376: 17:03:40.246 - Shutdown timeout enabled: 30000ms
+19376: 17:03:40.247 - Starting I/O thread pool with 2 threads
+19376: 17:03:40.248 - Using Standard allocator
+19376: 17:03:40.248 - Max message size: 512000
+19376: 17:03:40.249 - Starting business logic thread pool with the following settings
+19376: 17:03:40.249 - InitialThreads: 4 threads
+19376: 17:03:40.249 - MinThreads: 4 threads
+19376: 17:03:40.249 - Thread pool is fixed size
+19376: 17:03:40.249 - Starting ENet thread pool with the following settings
+19376: 17:03:40.249 - InitialThreads: 2 threads
+19376: 17:03:40.249 - MinThreads: 2 threads
+19376: 17:03:40.249 - Thread pool is fixed size
+19376: 17:03:40.249 - OnlyDispatchTimers: False
+19376: 17:03:40.250 - S2S: flow control: Max pending writes: 50
+19376: 17:03:40.250 - S2S: flow control: Max queued buffers: 200
+19376: 17:03:40.250 - S2S: flow control: Max pending writes MUX: 500
+19376: 17:03:40.250 - S2S: flow control: Max queued buffers MUX: 2000
+19376: 17:03:40.250 - S2S: MaxInboundMessageSize: 512000
+19376: 17:03:40.250 - S2S: MaxOutboundMessageSize: 512000
+19376: 17:03:40.250 - S2S: No inactivity timeout
+19376: 17:03:40.255 - WebSocket S2S: MaxInboundMessageSize: 512000
+19376: 17:03:40.255 - WebSocket S2S: MaxOutboundMessageSize: 512000
+19376: 17:03:40.255 - WebSocket S2S: No inactivity timeout
+19376: 17:03:40.256 - Max Reliable Data In Transit (awaiting ACKs) per peer : 16384 bytes
+19376: 17:03:40.256 - Per peer bandwidth limit
+19376: 17:03:40.256 - Transmit Rate Limit: 256 KB/Sec
+19376: 17:03:40.256 - Limit period: 200ms
+19376: 17:03:40.256 - Limit per period: 52428 bytes
+19376: 17:03:40.256 - Max queued data for transmission per peer: 163840 bytes
+19376: 17:03:40.256 - Minimum retransmit timeout: 200
+19376: 17:03:40.256 - No Maximum retransmit timeout
+19376: 17:03:40.256 - Minimum ENet timeout: 5000ms
+19376: 17:03:40.256 - Maximum ENet timeout: 30000ms
+19376: 17:03:40.256 - Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+19376: 17:03:40.256 - No RTT ACK adjustment timeout
+19376: 17:03:40.256 - Outbound ENet: MaxInboundMessageSize: 512000
+19376: 17:03:40.256 - Outbound ENet: MaxOutboundMessageSize: 512000
+19376: 17:03:40.264 - GetRuntime - About to load CLR - versions available:
+19376: 17:03:40.264 - v2.0.50727
+19376: 17:03:40.264 - v4.0.30319
+19376: 17:03:40.264 - Configuration requests: "v2.0.50727"
+19376: 17:03:40.264 - About to load version: "v2.0.50727"
+19376: 17:03:40.290 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+19376: 17:03:40.290 - CLRBaseDirectory set to "C:\GitHub\KostsaProject\Photon Server v4\deploy"
+19376: 17:03:40.290 - Optimising event broadcast for 20 or more peers
+19376: 17:03:40.293 - Start: About to load CLR - versions available:
+19376: 17:03:40.293 - v2.0.50727
+19376: 17:03:40.293 - v4.0.30319
+19376: 17:03:40.293 - No preference in configuration file, will load latest.
+19376: 17:03:40.293 - About to load version: "v4.0.30319"
+19376: 17:03:40.295 - Loaded version: "v4.0.30319"
+19376: 17:03:40.426 - Photon host runtime loaded
+19376: 17:03:42.039 - License is valid.
+19376: 17:03:42.039 - Licensed for 100 concurrent connections.
+19376: 17:03:42.039 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 16384 bytes
+19376: 17:03:42.039 - ENet: Per peer bandwidth limit
+19376: 17:03:42.039 - ENet: Transmit Rate Limit: 256 KB/Sec
+19376: 17:03:42.039 - ENet: Limit period: 200ms
+19376: 17:03:42.039 - ENet: Limit per period: 52428 bytes
+19376: 17:03:42.039 - ENet: Max queued data for transmission per peer: 163840 bytes
+19376: 17:03:42.039 - ENet: Minimum retransmit timeout: 200
+19376: 17:03:42.039 - No Maximum retransmit timeout
+19376: 17:03:42.039 - ENet: Minimum timeout: 5000ms
+19376: 17:03:42.039 - ENet: Maximum timeout: 30000ms
+19376: 17:03:42.039 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+19376: 17:03:42.039 - No RTT ACK adjustment timeout
+19376: 17:03:42.039 - About to load application: ChatServer from ChatServer
+19376: 17:03:42.113 - Taking reference on default app domain
+19376: 17:03:42.207 - Application: "ChatServer" started in app domain: 2
+19376: 17:03:42.207 - Adding TCP listener on: 0.0.0.0: 2749 with a listen backlog of: 150
+19376: 17:03:42.207 - TCP inactivity timeout: 5000ms
+19376: 17:03:42.207 - TCP disconnect timeout: 120000ms
+19376: 17:03:42.207 - MaxInboundMessageSize: 512000
+19376: 17:03:42.207 - MaxOutboundMessageSize: 512000
+19376: 17:03:42.207 - Forcing all applications ids to: "ChatServer"
+19376: 17:03:42.209 - Service is running...
+19376: 19:03:22.107 - Service is stopped...
+19376: 19:03:22.107 - Server shutting down...
+19376: 19:03:22.107 - Shutdown monitoring enabled, 30000ms before process abort
+19376: 19:03:22.107 - Notifying CLR applications of shutdown...
+19376: 19:03:22.107 - RequestApplicationStop: 2
+19376: 19:03:22.111 - RequestStop: defalt app domain
+19376: 19:03:22.116 - Shutting down WebSocket Outbound Connection Manager...
+19376: 19:03:22.116 - Shutting down TCP Outbound Connection Manager...
+19376: 19:03:22.116 - Shutting down ENet Outbound Connection Manager...
+19376: 19:03:22.116 - Disconnecting all outbound peers...
+19376: 19:03:22.116 - Shutting down ENet host...
+19376: 19:03:22.116 - Disconnecting all peers...
+19376: 19:03:22.116 - Shutting down socket servers...
+19376: 19:03:22.117 - Shutting down ENet thread pool...
+19376: 19:03:22.117 - Shutting down TCP inactivity timers...
+19376: 19:03:22.117 - WaitingForShutdownToComplete: TCP:0.0.0.0:2749
+19376: 19:03:22.117 - OnShutdownCompleted: TCP:0.0.0.0:2749
+19376: 19:03:22.117 - Shutting down CLR applications...
+19376: 19:03:22.120 - Shutting down business logic thread pool...
+27428: 19:03:22.120 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+19376: 19:03:22.120 - Shutting down I/O thread pool...
+19376: 19:03:22.120 - Destroying servers
+19376: 19:03:22.120 - Destroying WebSocket Outbound Connection Manager
+19376: 19:03:22.120 - Destroying TCP Outbound Connection Manager
+19376: 19:03:22.120 - Destroying TCP inactivity timer
+19376: 19:03:22.120 - Destroying ENet timer wheel
+19376: 19:03:22.120 - Destroying ENet host
+19376: 19:03:22.120 - Destroying ENet outbound host
+19376: 19:03:22.120 - Destroying HTTP inactivity timer
+19376: 19:03:22.120 - Destroying HTTP host
+19376: 19:03:22.120 - Destroying HTTP Chunk host
+19376: 19:03:22.120 - Flushing ENET buffer allocator...
+19376: 19:03:22.120 - Flushing TCP buffer handle allocator...
+19376: 19:03:22.120 - Flushing stream socket allocator...
+19376: 19:03:22.120 - Flushing inbound datagram socket allocator...
+19376: 19:03:22.120 - Flushing outbound datagram socket allocator...
+19376: 19:03:22.120 - Destroying CLR dispatcher
+19376: 19:03:22.120 - Destroying CLR applications
+19376: 19:03:22.120 - ~CCLRApplicationCollection() - Waiting up to 10 seconds for the CLR to release all of our objects
+27568: 19:03:22.126 - Unloading Domain: ApplicationName = 'ChatServer', DomainId='2'
+27428: 19:03:22.126 - CManagedHost::OnDomainUnload() - 2
+19376: 19:03:22.130 - ~CCLRApplicationCollection() - Done. All objects released
+19376: 19:03:22.131 - ~CManagedHost() - Release default app domain
+19376: 19:03:22.131 - CManagedHost::OnDomainUnload() - 1
+19376: 19:03:22.131 - ~CManagedHost() - Waiting up to 10 seconds for CLR shutdown...
+19376: 19:03:22.131 - ~CManagedHost
+19376: 19:03:22.131 - Destroying ENet thread pool
+19376: 19:03:22.131 - Destroying Business logic thread pool
+19376: 19:03:22.131 - Destroying I/O thread pool
+19376: 19:03:22.131 - Destroying ENet buffer allocator
+19376: 19:03:22.131 - Destroying TCP buffer allocator
+19376: 19:03:22.131 - Destroying TCP socket allocator
+19376: 19:03:22.131 - Destroying ENet inbound socket allocator
+19376: 19:03:22.131 - Destroying ENet outbound socket allocator
+19376: 19:03:22.131 - Destroying shared datagram flow control data
+19376: 19:03:22.131 - Shutdown complete...
+19376: 19:03:22.131 - Service shutting down
+19376: 19:03:22.133 - Service shut down complete
+24480: 19:03:41.861 - ---
+24480: 19:03:41.861 - Service: "Photon Socket Server" starting
+24480: 19:03:41.861 - Config File: C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\PhotonServer.config
+24480: 19:03:41.862 - Will produce at most: 10 crash dumps
+24480: 19:03:41.862 - Action: run as exe
+24480: 19:03:41.863 - Server Starting...
+24480: 19:03:41.863 -    Tick count: 547761812 (wraps in: 43.3704 days)
+24480: 19:03:41.863 - Tick count 64: 547761812
+24480: 19:03:41.863 - Photon Version: 4.0.28.2962
+24480: 19:03:41.863 - PID: 7096
+24480: 19:03:41.863 - Config File: C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\PhotonServer.config
+24480: 19:03:41.863 - Will NOT log unimportant exceptions
+24480: 19:03:41.868 - Shutdown timeout enabled: 30000ms
+24480: 19:03:41.868 - Starting I/O thread pool with 2 threads
+24480: 19:03:41.868 - Using Standard allocator
+24480: 19:03:41.868 - Max message size: 512000
+24480: 19:03:41.868 - Starting business logic thread pool with the following settings
+24480: 19:03:41.868 - InitialThreads: 4 threads
+24480: 19:03:41.868 - MinThreads: 4 threads
+24480: 19:03:41.868 - Thread pool is fixed size
+24480: 19:03:41.868 - Starting ENet thread pool with the following settings
+24480: 19:03:41.868 - InitialThreads: 2 threads
+24480: 19:03:41.868 - MinThreads: 2 threads
+24480: 19:03:41.868 - Thread pool is fixed size
+24480: 19:03:41.868 - OnlyDispatchTimers: False
+24480: 19:03:41.868 - S2S: flow control: Max pending writes: 50
+24480: 19:03:41.868 - S2S: flow control: Max queued buffers: 200
+24480: 19:03:41.868 - S2S: flow control: Max pending writes MUX: 500
+24480: 19:03:41.868 - S2S: flow control: Max queued buffers MUX: 2000
+24480: 19:03:41.868 - S2S: MaxInboundMessageSize: 512000
+24480: 19:03:41.868 - S2S: MaxOutboundMessageSize: 512000
+24480: 19:03:41.868 - S2S: No inactivity timeout
+24480: 19:03:41.872 - WebSocket S2S: MaxInboundMessageSize: 512000
+24480: 19:03:41.872 - WebSocket S2S: MaxOutboundMessageSize: 512000
+24480: 19:03:41.872 - WebSocket S2S: No inactivity timeout
+24480: 19:03:41.872 - Max Reliable Data In Transit (awaiting ACKs) per peer : 16384 bytes
+24480: 19:03:41.872 - Per peer bandwidth limit
+24480: 19:03:41.872 - Transmit Rate Limit: 256 KB/Sec
+24480: 19:03:41.872 - Limit period: 200ms
+24480: 19:03:41.872 - Limit per period: 52428 bytes
+24480: 19:03:41.872 - Max queued data for transmission per peer: 163840 bytes
+24480: 19:03:41.872 - Minimum retransmit timeout: 200
+24480: 19:03:41.872 - No Maximum retransmit timeout
+24480: 19:03:41.872 - Minimum ENet timeout: 5000ms
+24480: 19:03:41.872 - Maximum ENet timeout: 30000ms
+24480: 19:03:41.872 - Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+24480: 19:03:41.872 - No RTT ACK adjustment timeout
+24480: 19:03:41.872 - Outbound ENet: MaxInboundMessageSize: 512000
+24480: 19:03:41.872 - Outbound ENet: MaxOutboundMessageSize: 512000
+24480: 19:03:41.873 - GetRuntime - About to load CLR - versions available:
+24480: 19:03:41.873 - v2.0.50727
+24480: 19:03:41.873 - v4.0.30319
+24480: 19:03:41.873 - Configuration requests: "v2.0.50727"
+24480: 19:03:41.873 - About to load version: "v2.0.50727"
+24480: 19:03:41.881 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+24480: 19:03:41.881 - CLRBaseDirectory set to "C:\GitHub\KostsaProject\Photon Server v4\deploy"
+24480: 19:03:41.881 - Optimising event broadcast for 20 or more peers
+24480: 19:03:41.882 - Start: About to load CLR - versions available:
+24480: 19:03:41.882 - v2.0.50727
+24480: 19:03:41.882 - v4.0.30319
+24480: 19:03:41.882 - No preference in configuration file, will load latest.
+24480: 19:03:41.882 - About to load version: "v4.0.30319"
+24480: 19:03:41.883 - Loaded version: "v4.0.30319"
+24480: 19:03:41.988 - Photon host runtime loaded
+24480: 19:03:43.740 - License is valid.
+24480: 19:03:43.740 - Licensed for 100 concurrent connections.
+24480: 19:03:43.740 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 16384 bytes
+24480: 19:03:43.740 - ENet: Per peer bandwidth limit
+24480: 19:03:43.740 - ENet: Transmit Rate Limit: 256 KB/Sec
+24480: 19:03:43.740 - ENet: Limit period: 200ms
+24480: 19:03:43.740 - ENet: Limit per period: 52428 bytes
+24480: 19:03:43.740 - ENet: Max queued data for transmission per peer: 163840 bytes
+24480: 19:03:43.740 - ENet: Minimum retransmit timeout: 200
+24480: 19:03:43.740 - No Maximum retransmit timeout
+24480: 19:03:43.740 - ENet: Minimum timeout: 5000ms
+24480: 19:03:43.740 - ENet: Maximum timeout: 30000ms
+24480: 19:03:43.740 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+24480: 19:03:43.740 - No RTT ACK adjustment timeout
+24480: 19:03:43.740 - About to load application: ChatServer from ChatServer
+24480: 19:03:43.810 - Taking reference on default app domain
+24480: 19:03:43.851 - Application: "ChatServer" started in app domain: 2
+24480: 19:03:43.851 - Adding TCP listener on: 0.0.0.0: 2749 with a listen backlog of: 150
+24480: 19:03:43.851 - TCP inactivity timeout: 5000ms
+24480: 19:03:43.851 - TCP disconnect timeout: 120000ms
+24480: 19:03:43.851 - MaxInboundMessageSize: 512000
+24480: 19:03:43.851 - MaxOutboundMessageSize: 512000
+24480: 19:03:43.851 - Forcing all applications ids to: "ChatServer"
+24480: 19:03:43.853 - Service is running...
