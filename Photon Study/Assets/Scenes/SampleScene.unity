@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc30d1644e085c42875ca6ec8136f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabCard: {fileID: 3297783281939763524, guid: 8b805a877144fe1449a8d71e7a445020,
+  prefabCard: {fileID: 8384192435794887330, guid: 8b805a877144fe1449a8d71e7a445020,
     type: 3}
   parentPanel: {fileID: 798347987}
 --- !u!4 &857188699

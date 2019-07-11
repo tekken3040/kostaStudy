@@ -10,6 +10,18 @@ namespace Server
 {
     public delegate void OnResponse(ERROR_ID err);
 
+    public struct RequestJob
+    {
+        public UInt16 u2SeqNo;
+        public OnResponse callback;
+
+        public RequestJob(UInt16 seqNo, OnResponse _callback)
+        {
+            u2SeqNo = seqNo;
+            callback = _callback;
+        }
+    }
+
     public class ServerMgr : Singleton<ServerMgr>, IPhotonPeerListener
     {
         private bool connected;
@@ -20,6 +32,8 @@ namespace Server
         byte[] outpacket;
         MemoryStream msBufW;
         BinaryWriter bwOut;
+
+        UInt16 u2SeqNo = 0;
 
         private void Awake()
         {
@@ -41,6 +55,12 @@ namespace Server
             //StartCoroutine(ChatInput());
         }
 
+        private Queue<RequestJob> requestJobs = new Queue<RequestJob>();
+        public Queue<RequestJob> GetRequestQueue()
+        {
+            return requestJobs;
+        }
+
         private IEnumerator ChatInput()
         {
             while (true)
@@ -55,21 +75,21 @@ namespace Server
             }
         }
 
-        public void RequestCreateCard(MSGs u1Type, CARD_INIT cardInit)
+        public void RequestCreateCard(MSGs u1Type, CARD_INIT cardInit, OnResponse _callback)
         {
             Debug.Log("Request Card");
-            PacketHeader.Set(bwOut, MSGs.CREATE_CARD);
+            PacketHeader.Set(bwOut, MSGs.CREATE_CARD, u2SeqNo);
             bwOut.Write(cardInit.bAura);
             bwOut.Write(cardInit.frameName);
             bwOut.Write(cardInit.imgName);
             bwOut.Write(cardInit.u1Count);
-            bwOut.Write(cardInit.callback.Method.Name);
-            
-            Debug.Log(cardInit.callback.Method.Name);
-            //var parameters = new Dictionary<byte, object> { { (byte)u1Type, msBufW.ToArray() } };
+
+            RequestJob job = new RequestJob(u2SeqNo, _callback);
+            GetRequestQueue().Enqueue(job);
+            u2SeqNo++;
+
             byte[] u1Buff = msBufW.ToArray();//.GetBuffer();
             var parameters = new Dictionary<byte, object> { { (byte)u1Type, u1Buff } };
-            //client.peer.OpCustom((byte)u1Type, parameters, true);
             client.peer.SendOperation((byte)u1Type, parameters, SendOptions.SendReliable);
         }
 

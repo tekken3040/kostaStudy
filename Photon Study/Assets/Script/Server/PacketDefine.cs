@@ -24,11 +24,11 @@ namespace Server
 
     class PacketHeader
     {
-        public static void Set(BinaryWriter bwOut, MSGs u1MSGType)
+        public static void Set(BinaryWriter bwOut, MSGs u1MSGType, UInt16 u2SeqNo)
         {
             bwOut.BaseStream.Position = 0;
             bwOut.Write((byte)u1MSGType);
-            //bwOut.Write(u2SeqNo);
+            bwOut.Write(u2SeqNo);
         }
     }
 
@@ -38,7 +38,7 @@ namespace Server
         public string imgName;
         public string frameName;
         public bool bAura;
-        public OnResponse callback;
+        //public OnResponse callback;
     }
 
     public enum MSGType

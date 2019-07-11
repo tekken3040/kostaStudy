@@ -499,3 +499,24 @@
 2019-07-09 19:03:43,854 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
 2019-07-09 19:03:43,865 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
 2019-07-09 19:03:46,848 [13] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll
+2019-07-10 09:50:12,196 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2019-07-10 09:50:12,209 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2019-07-10 09:50:12,214 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2019-07-10 09:50:12,512 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2019-07-10 09:50:13,775 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'ChatServer' , assemblyName = 'ChatServer'
+2019-07-10 09:50:13,781 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-10 09:50:13,785 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin;bin_Win64;Shared;'
+2019-07-10 09:50:13,790 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2019-07-10 09:50:13,796 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2019-07-10 09:50:13,838 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer'
+2019-07-10 09:50:13,842 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\ChatServer\bin'
+2019-07-10 09:50:13,846 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy'
+2019-07-10 09:50:13,851 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'C:\GitHub\KostsaProject\Photon Server v4\deploy\bin_Win64\log'
+2019-07-10 09:50:13,886 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ChatServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ChatServer.DLL
+2019-07-10 09:50:13,890 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2019-07-10 09:50:13,924 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/Photon.SocketServer.DLL
+2019-07-10 09:50:13,953 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///C:/GitHub/KostsaProject/Photon Server v4/deploy/ChatServer/bin/ExitGamesLibs.DLL
+2019-07-10 09:50:13,965 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'ChatServer', assemblyName = 'ChatServer', typeName = 'Server.ChatServer'
+2019-07-10 09:50:13,974 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'ChatServer', DomainId='2' -- calling Application.Setup
+2019-07-10 09:50:13,990 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2019-07-10 09:50:49,563 [10] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 from file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/netstandard/v4.0_2.0.0.0__cc7b13ffcd2ddd51/netstandard.dll

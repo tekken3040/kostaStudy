@@ -42,24 +42,22 @@ namespace Server
                         }
                     }
                     data = newDict[u1Key];
-                    
+                    UInt16 u2SeqNo = 0;
                     MemoryStream memBuf = new MemoryStream(data);
                     BinaryReader brln = new BinaryReader(memBuf, Encoding.Unicode);
                     CARD_INIT cardInit = new CARD_INIT();
                     brln.BaseStream.Position = 0;
                     brln.ReadByte();
+                    u2SeqNo = brln.ReadUInt16();
                     cardInit.bAura = brln.ReadBoolean();
                     cardInit.frameName = brln.ReadString();
                     cardInit.imgName = brln.ReadString();
                     cardInit.u1Count = brln.ReadByte();
-                    //cardInit.callback
-                    //SimplePhotonChat simplePhotonChat = new SimplePhotonChat();
-                    //OnResponse _callback = OnResponse.CreateDelegate(ERROR_ID.NONE, simplePhotonChat, brln.ReadString());
 
-                    //cardInit.callback = 
-                    //(CARD_INIT)operationResponse.Parameters[operationResponse.OperationCode];
-                    //Debug.Log(cardInit.callback.Method.ToString());
-                    //InitHandler.InitCard((ERROR_ID)operationResponse.ReturnCode, cardInit.callback);
+                    if(ServerMgr.Instance.GetRequestQueue().Peek().u2SeqNo.Equals(u2SeqNo))
+                    {
+                        InitHandler.InitCard(ERROR_ID.NONE, ServerMgr.Instance.GetRequestQueue().Peek().callback);
+                    }
                     break;
             }
         }
@@ -75,7 +73,7 @@ namespace Server
             }
             if(err.Equals(ERROR_ID.NONE))
             {
-
+                ServerMgr.Instance.GetRequestQueue().Dequeue();
             }
             callback(err);
             return err;
