@@ -18,7 +18,7 @@ public class TokoControl : MonoBehaviour
 
     float fJump = 0f;
     bool bGrounded = true;
-    bool bDead = true;
+    bool bDead = false;
 
     enum INPUT_BUTTON
     {
@@ -72,7 +72,7 @@ public class TokoControl : MonoBehaviour
     void FixedUpdate()
     {
         characterController.Move(Vector3.up * fJump);
-        fJump += -20 * Time.deltaTime;
+        fJump -= 20 * Time.deltaTime;
         if (fJump <= 0)
         {
             animator.SetBool("Airial", false);

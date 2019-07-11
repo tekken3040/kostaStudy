@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        direction = this.transform.TransformDirection(direction);
+        //direction = this.transform.TransformDirection(direction);
     }
 
     void FixedUpdate()
@@ -28,10 +28,15 @@ public class Player : MonoBehaviour
                 fJump = jumpSpeed;
             }
         }
-        fJump -= Physics.gravity.y * Time.deltaTime;
-        direction.y = fJump;
-        characterController.Move(direction * speed * Time.deltaTime);
-        
+        else
+        { 
+            //direction.y = fJump;
+
+            //characterController.Move(direction);
+            fJump += Physics.gravity.y * Time.deltaTime;
+            direction.y = fJump;
+        }
+        characterController.Move(direction*Time.deltaTime);
         SetMoveAnim(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
 

@@ -533,7 +533,7 @@ MonoBehaviour:
   characterController: {fileID: 489211329}
   anim: {fileID: 489211331}
   speed: 1
-  jumpSpeed: 20
+  jumpSpeed: 6
 --- !u!4 &641952545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3394490517682894785, guid: 44bef4c861b483146b278ccdf1494ba2,
@@ -2714,6 +2714,16 @@ PrefabInstance:
       propertyPath: m_CullingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8894199428450768301, guid: 44bef4c861b483146b278ccdf1494ba2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.01977827
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894199428450768301, guid: 44bef4c861b483146b278ccdf1494ba2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.042523548
+      objectReference: {fileID: 0}
     - target: {fileID: -6615017778036176718, guid: 44bef4c861b483146b278ccdf1494ba2,
         type: 3}
       propertyPath: m_IsActive
@@ -2803,16 +2813,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 0.45377296
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894199428450768301, guid: 44bef4c861b483146b278ccdf1494ba2,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.01977827
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894199428450768301, guid: 44bef4c861b483146b278ccdf1494ba2,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.042523548
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44bef4c861b483146b278ccdf1494ba2, type: 3}
