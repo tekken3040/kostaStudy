@@ -69,8 +69,11 @@
     <Compile Include="Assets\DynamicBone\Scripts\DynamicBonePlaneCollider.cs" />
     <Compile Include="Assets\MToon\Scripts\Utils.cs" />
     <Compile Include="Assets\Script\ActionListBtn.cs" />
+    <Compile Include="Assets\Script\BottomPanelManager.cs" />
+    <Compile Include="Assets\Script\LeftPanelManager.cs" />
     <Compile Include="Assets\Script\Manager.cs" />
     <Compile Include="Assets\Script\Player.cs" />
+    <Compile Include="Assets\Script\RightPanelManager.cs" />
     <Compile Include="Assets\Script\TopPanelManager.cs" />
     <None Include="Assets\MToon\Resources\Shaders\MToonCore.cginc" />
     <None Include="Assets\MToon\Resources\Shaders\MToonSM4.cginc" />

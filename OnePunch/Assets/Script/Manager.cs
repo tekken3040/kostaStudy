@@ -6,57 +6,52 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
-    [SerializeField] Button btnKick_L, btnKick_R, btnAttack_L, btnAttack_R;
-    [SerializeField] Animator animator;
-
-    public enum ATTACK_TYPE
+    // 액션 타입 enum
+    public enum ACTION_TYPE
     {
-        NONE = 0,
-        KICK_LEFT,
-        KICK_RIGHT,
-        PUNCH_LEFT,
-        PUNCH_RIGHT,
+        ATTACK = 0,
+        GUARD,
+        GUARD_BREAK,
+        HEAVY_ATTACK,
     }
 
-    int punchCnt = 0;
-    int punchCnt2 = 0;
-
-    public void OnClickAniBtn(string str)
+    // 플레이어와 적 구분 enum
+    public enum TARGET
     {
-        if (punchCnt == 3)
-            punchCnt = 0;
-        if (punchCnt2 == 3)
-            punchCnt2 = 0;
-        
-        switch (str)
-        {
-            case "Kick_L":
-                animator.SetTrigger("Kick_L");
-                break;
+        NONE = 0,
+        PLAYER,
+        ENEMY,
+    }
 
-            case "Kick_R":
-                animator.SetTrigger("Kick_R");
-                break;
+    [SerializeField] TopPanelManager        topPanel;       // 상단 매니저
+    [SerializeField] LeftPanelManager       leftPanel;      // 왼쪽 매니저
+    [SerializeField] RightPanelManager      rightPanel;     // 오른쪽 매니저
+    [SerializeField] BottomPanelManager     bottomPanel;    // 바텀 매니저
 
-            case "Attack_L":
-                if (punchCnt == 0)
-                    animator.SetTrigger("Attack_L_1");
-                else if (punchCnt == 1)
-                    animator.SetTrigger("Attack_L_2");
-                else if (punchCnt == 2)
-                    animator.SetTrigger("Attack_L_3");
-                punchCnt++;
-                break;
+    private Byte u1SelectedSlot = 0;                        // 현재 선택된 플레이어 액션 슬롯
 
-            case "Attack_R":
-                if (punchCnt2 == 0)
-                    animator.SetTrigger("Attack_R_1");
-                else if (punchCnt2 == 1)
-                    animator.SetTrigger("Attack_R_2");
-                else if (punchCnt2 == 2)
-                    animator.SetTrigger("Attack_R_3");
-                punchCnt2++;
-                break;
-        }
+    private void Start()
+    {
+        Init();
+    }
+
+    private void Init()
+    {
+        topPanel.Init();
+        rightPanel.Init();
+        leftPanel.Init();
+        leftPanel.OnClickActionButton(u1SelectedSlot);
+    }
+
+    // 액션 슬롯 설정
+    public void SetSelectActionSlot(Byte u1slot)
+    {
+        u1SelectedSlot = u1slot;
+    }
+
+    // 액션 슬롯 가져오기
+    public Byte GetSelectActionSlot()
+    {
+        return u1SelectedSlot;
     }
 }
