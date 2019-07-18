@@ -8,13 +8,12 @@ public class RightPanelManager : MonoBehaviour
 {
     [SerializeField] Image[]    imgActions;         // 액션 이미지
     [SerializeField] Sprite[]   actionSprites;      // 교체할 액션 스프라이트
-    [SerializeField] Sprite     unknownSprite;      // 감춰둘 액션 스프라이트
 
     // 초기화
     public void Init()
     {
         for(int i=0; i<imgActions.Length; i++)
-            imgActions[i].sprite = unknownSprite;
+            SetActionImage((Byte)i, Manager.ACTION_TYPE.UNKNOWN);
     }
 
     // 액션 이미지 변경

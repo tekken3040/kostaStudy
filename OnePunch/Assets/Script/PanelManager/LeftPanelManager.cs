@@ -8,12 +8,11 @@ public class LeftPanelManager : MonoBehaviour
 {
     [SerializeField] Image[]        imgActions;         // 액션 버튼
     [SerializeField] Sprite[]       actionSprites;      // 액션에 따라 교체될 스프라이트
-    [SerializeField] Sprite         unknownSprite;      // 감춰둘 액션 스프라이트
 
     private Button[]                btnActions;         // 액션 버튼 컴포넌트
     private ActionListBtn[]         actionListBtns;     // 액션 하이라이트 컨트롤러
 
-    private void Start()
+    private void Awake()
     {
         btnActions = new Button[imgActions.Length];
         for(int i=0; i<imgActions.Length; i++)
@@ -27,7 +26,7 @@ public class LeftPanelManager : MonoBehaviour
     public void Init()
     {
         for(int i=0; i<imgActions.Length; i++)
-            imgActions[i].sprite = unknownSprite;
+            SetAction((Byte)i, Manager.ACTION_TYPE.UNKNOWN);
     }
 
     // 액션버튼에 이미지 셋팅
@@ -42,7 +41,10 @@ public class LeftPanelManager : MonoBehaviour
         for(int i=0; i<actionListBtns.Length; i++)
         {
             if(i.Equals(slot))
+            {
                 actionListBtns[i].OnEdgeActive(true);
+                Manager.Instance.SetSelectActionSlot((Byte)i);
+            }
             else
                 actionListBtns[i].OnEdgeActive(false);
         }

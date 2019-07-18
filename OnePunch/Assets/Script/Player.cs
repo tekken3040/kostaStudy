@@ -35,15 +35,14 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        direction = this.transform.TransformDirection(direction);
-        InputKeys();
+        //direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //direction = this.transform.TransformDirection(direction);
+        //InputKeys();
     }
 
     void FixedUpdate()
     {
-        //InputKeys();
-        characterController.Move(direction*Time.deltaTime);
+        //characterController.Move(direction*Time.deltaTime);
     }
 
     void InputKeys()
