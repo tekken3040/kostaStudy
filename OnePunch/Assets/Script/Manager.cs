@@ -3,56 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Manager : Singleton<Manager>
 {
-    // 액션 타입 enum
-    public enum ACTION_TYPE
-    {
-        ATTACK = 0,                                         // 공격
-        GUARD,                                              // 가드
-        GUARD_BREAK,                                        // 가드 브레이크
-        HEAVY_ATTACK,                                       // 필살기(강공격)
-        UNKNOWN,                                            // 미확인(플레이어 : 아직 선택하지 않음/ 적: 알수없음)
-    }
+    [SerializeField] private TopPanelManager        topPanel;       // 상단 매니저
+    [SerializeField] private LeftPanelManager       leftPanel;      // 왼쪽 매니저
+    [SerializeField] private RightPanelManager      rightPanel;     // 오른쪽 매니저
+    [SerializeField] private BottomPanelManager     bottomPanel;    // 바텀 매니저
 
-    // 플레이어와 적 구분 enum
-    public enum TARGET
-    {
-        NONE = 0,
-        PLAYER,
-        ENEMY,
-    }
-
-    [SerializeField] TopPanelManager        topPanel;       // 상단 매니저
-    [SerializeField] LeftPanelManager       leftPanel;      // 왼쪽 매니저
-    [SerializeField] RightPanelManager      rightPanel;     // 오른쪽 매니저
-    [SerializeField] BottomPanelManager     bottomPanel;    // 바텀 매니저
-
-    private Byte u1SelectedSlot = 0;                        // 현재 선택된 플레이어 액션 슬롯
-    private Byte u1PlayerPower = 0;                         // 플레이어 파워 스택
-    public Byte PlayerPower                                 // 플레이어 파워 스택 get set
+    private Byte u1SelectedSlot = 0;                                // 현재 선택된 플레이어 액션 슬롯
+    private Byte u1PlayerPower = 0;                                 // 플레이어 파워 스택
+    public Byte PlayerPower                                         // 플레이어 파워 스택 get set
     {
         get{ return u1PlayerPower; }
         set{ u1PlayerPower = value; }
     }
-    private Byte u1EnemyPower = 0;                          // 적 파워 스택
-    public Byte EnemyPower                                  // 적 파워 스택 get set
+    private Byte u1EnemyPower = 0;                                  // 적 파워 스택
+    public Byte EnemyPower                                          // 적 파워 스택 get set
     {
         get{ return u1EnemyPower; }
         set{ u1EnemyPower = value; }
     }
 
-    private Byte[] u1PlayerActions;                         // 플레이어가 선택한 액션들
+    private Byte[] u1PlayerActions;                                 // 플레이어가 선택한 액션들
     public Byte[] PlayerActions
     {
         get{ return u1PlayerActions; }
     }
-    private Byte[] u1EnemyActions;                          // 적이 선택한 액션들
+    private Byte[] u1EnemyActions;                                  // 적이 선택한 액션들
     public Byte[] EnemyActions
     {
         get{ return u1EnemyActions; }
     }
+
+    private GameObject objPlayer;                                   // 플레이어 오브젝트
+    private GameObject objEnemy;                                    // 적 오브젝트
 
     private void Awake()
     {
@@ -60,11 +46,32 @@ public class Manager : Singleton<Manager>
         u1EnemyActions = new Byte[Defines.Action_Cnt];
         for(int i=0; i<Defines.Action_Cnt; i++)
         {
-            u1PlayerActions[i] = Convert.ToByte(ACTION_TYPE.UNKNOWN);
-            u1EnemyActions[i] = Convert.ToByte(ACTION_TYPE.UNKNOWN);
+            u1PlayerActions[i] = Convert.ToByte(Defines.ACTION_TYPE.UNKNOWN);
+            u1EnemyActions[i] = Convert.ToByte(Defines.ACTION_TYPE.UNKNOWN);
         }
+        objPlayer = GameObject.FindWithTag("Player");
+        objEnemy = GameObject.FindWithTag("Enemy");
+    }
+    public void InitCall()
+    {
+        StartCoroutine(DelayedInit());
     }
 
+    IEnumerator DelayedInit()
+    {
+        yield return null;
+        if(SceneManager.GetActiveScene().isLoaded)
+        {
+            topPanel = GameObject.Find("TopPanel").GetComponent<TopPanelManager>();
+            leftPanel = GameObject.Find("LeftPanel").GetComponent<LeftPanelManager>();
+            rightPanel = GameObject.Find("RightPanel").GetComponent<RightPanelManager>();
+            bottomPanel = GameObject.Find("BottomPanel").GetComponent<BottomPanelManager>();
+
+            // 추후 연출이 들어가면 옴길것
+            Init();
+        }
+    }
+    /*
     private void Start()
     {
         topPanel = GameObject.Find("TopPanel").GetComponent<TopPanelManager>();
@@ -74,7 +81,7 @@ public class Manager : Singleton<Manager>
 
         // 추후 연출이 들어가면 옴길것
         Init();
-    }
+    }*/
 
     // 초기화 Init함수
     private void Init()

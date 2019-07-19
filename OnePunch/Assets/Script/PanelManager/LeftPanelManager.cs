@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class LeftPanelManager : MonoBehaviour
 {
-    [SerializeField] Image[]        imgActions;         // 액션 버튼
-    [SerializeField] Sprite[]       actionSprites;      // 액션에 따라 교체될 스프라이트
+    [SerializeField] private Image[]    imgActions;         // 액션 버튼
+    [SerializeField] private Sprite[]   actionSprites;      // 액션에 따라 교체될 스프라이트
 
-    private Button[]                btnActions;         // 액션 버튼 컴포넌트
-    private ActionListBtn[]         actionListBtns;     // 액션 하이라이트 컨트롤러
+    private Button[]                    btnActions;         // 액션 버튼 컴포넌트
+    private ActionListBtn[]             actionListBtns;     // 액션 하이라이트 컨트롤러
 
     private void Awake()
     {
@@ -26,11 +26,11 @@ public class LeftPanelManager : MonoBehaviour
     public void Init()
     {
         for(int i=0; i<imgActions.Length; i++)
-            SetAction((Byte)i, Manager.ACTION_TYPE.UNKNOWN);
+            SetAction((Byte)i, Defines.ACTION_TYPE.UNKNOWN);
     }
 
     // 액션버튼에 이미지 셋팅
-    public void SetAction(Byte u1Slot, Manager.ACTION_TYPE _type)
+    public void SetAction(Byte u1Slot, Defines.ACTION_TYPE _type)
     {
         imgActions[u1Slot].sprite = actionSprites[(Byte)_type];
     }

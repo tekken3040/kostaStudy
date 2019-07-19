@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ActionListBtn : MonoBehaviour
 {
-    [SerializeField] GameObject Edge;
+    [SerializeField] private GameObject Edge;
 
     public void OnEdgeActive(bool isActive)
     {
