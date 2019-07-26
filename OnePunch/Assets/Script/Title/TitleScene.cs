@@ -14,6 +14,7 @@ public class TitleScene : MonoBehaviour
     public void OnClickMultiPlay()
     {
         // 아직 멀티플레이는 준비가 안되었다는 팝업
+        PopupManager.Instance.ShowPopup(Defines.MultyPlayIsNotReady);
         return;
     }
 }

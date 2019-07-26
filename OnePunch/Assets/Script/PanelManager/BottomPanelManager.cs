@@ -52,10 +52,11 @@ public class BottomPanelManager : MonoBehaviour
             if(Manager.Instance.PlayerActions[i].Equals(null) || Manager.Instance.PlayerActions[i].Equals((Byte)Defines.ACTION_TYPE.UNKNOWN))
             {
                 // 아직 선택하지 않은 액션 슬롯이 있다고 팝업 출력
+                PopupManager.Instance.ShowPopup(Defines.NotSelectedAction);
                 return;
             }
         }
-
+        Manager.Instance.SetReady();
         SetBtnActive(false);
         panelAnimator.SetBool("Open", false);
     }

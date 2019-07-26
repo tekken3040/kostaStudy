@@ -6,6 +6,17 @@ using UnityEngine;
 public class Enemy : Actor
 {
     private System.Random random;                   // 시간을 시드로 받는 랜덤 변수
+    public List<byte> ActionList
+    {
+        get { return u1ActionsList; }
+    }
+
+    private bool bAction = false;
+    public bool isAction
+    {
+        get { return bAction; }
+        set { bAction = value; }
+    }
 
     private void Start()
     {

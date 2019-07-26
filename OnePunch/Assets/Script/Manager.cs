@@ -38,7 +38,9 @@ public class Manager : Singleton<Manager>
     }
 
     private GameObject objPlayer;                                   // 플레이어 오브젝트
+    private Player cPlayer;                                         // 플레이어 컴포넌트
     private GameObject objEnemy;                                    // 적 오브젝트
+    private Enemy cEnemy;                                           // 적 컴포넌트
 
     private void Awake()
     {
@@ -50,7 +52,9 @@ public class Manager : Singleton<Manager>
             u1EnemyActions[i] = Convert.ToByte(Defines.ACTION_TYPE.UNKNOWN);
         }
         objPlayer = GameObject.FindWithTag("Player");
+        cPlayer = objPlayer.GetComponent<Player>();
         objEnemy = GameObject.FindWithTag("Enemy");
+        cEnemy = objEnemy.GetComponent<Enemy>();
     }
     public void InitCall()
     {
@@ -70,18 +74,9 @@ public class Manager : Singleton<Manager>
             // 추후 연출이 들어가면 옴길것
             Init();
         }
+        else
+            StartCoroutine(DelayedInit());
     }
-    /*
-    private void Start()
-    {
-        topPanel = GameObject.Find("TopPanel").GetComponent<TopPanelManager>();
-        leftPanel = GameObject.Find("LeftPanel").GetComponent<LeftPanelManager>();
-        rightPanel = GameObject.Find("RightPanel").GetComponent<RightPanelManager>();
-        bottomPanel = GameObject.Find("BottomPanel").GetComponent<BottomPanelManager>();
-
-        // 추후 연출이 들어가면 옴길것
-        Init();
-    }*/
 
     // 초기화 Init함수
     private void Init()
@@ -91,6 +86,16 @@ public class Manager : Singleton<Manager>
         leftPanel.Init();
         leftPanel.OnClickActionButton(u1SelectedSlot);
         bottomPanel.EneableActionList();
+    }
+
+    // 플레이어 준비 완료
+    public void SetReady( )
+    {
+        cPlayer.ActionList.Clear();
+        for(int i=0; i<Defines.Action_Cnt; i++)
+            cPlayer.ActionList.Add(u1PlayerActions[i]);
+        cEnemy.SetActions();
+        PlayController.Instance.PlayStart();
     }
 
     // 액션 슬롯 설정

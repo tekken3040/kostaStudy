@@ -277,6 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 111384272}
+  - component: {fileID: 111384273}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Enemy
@@ -299,6 +300,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &111384273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111384271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23770102dc81c8f43a9f53c224a7ff8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &134326766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,22 +1473,6 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 2033425446}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &489211331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489211328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a07e1cbbeea0241820c66569e031ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterController: {fileID: 489211329}
-  anim: {fileID: 489211330}
-  speed: 3
-  jumpSpeed: 4
 --- !u!54 &489211333
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3144,6 +3141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 964860128}
+  - component: {fileID: 964860129}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -3166,6 +3164,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &964860129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964860127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a07e1cbbeea0241820c66569e031ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 489211329}
+  anim: {fileID: 489211330}
+  speed: 3
+  jumpSpeed: 4
 --- !u!1 &987448401
 GameObject:
   m_ObjectHideFlags: 0
@@ -4410,22 +4424,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1366555542}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1366555582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366555581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a07e1cbbeea0241820c66569e031ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterController: {fileID: 1366555601}
-  anim: {fileID: 1366555600}
-  speed: 3
-  jumpSpeed: 4
 --- !u!114 &1366555583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5391,12 +5389,6 @@ MonoBehaviour:
   m_DistantDisable: 0
   m_ReferenceObject: {fileID: 0}
   m_DistanceToObject: 20
---- !u!95 &1366555600 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 44bef4c861b483146b278ccdf1494ba2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1366555542}
-  m_PrefabAsset: {fileID: 0}
 --- !u!143 &1366555601
 CharacterController:
   m_ObjectHideFlags: 0

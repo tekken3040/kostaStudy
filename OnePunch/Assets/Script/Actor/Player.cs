@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Actor
 {
     public enum ANIM_PARAMETER
     {
@@ -32,62 +33,36 @@ public class Player : MonoBehaviour
     Vector3 direction = Vector3.zero;
     float fJump = 0;
     bool isJump = false;
+    private bool bAction = false;
+    public bool isAction
+    {
+        get{ return bAction; }
+        set{ bAction = value; }
+    }
+
+    public List<byte> ActionList
+    {
+        get{ return u1ActionsList; }
+    }
+
+    private void Start()
+    {
+        // 상속받은 액션 리스트 초기화
+        u1ActionsList = new List<byte>();
+        // 초기값인 알수없음으로 설정
+        for(int i = 0; i < Defines.Action_Cnt; i++)
+            u1ActionsList.Add(Convert.ToByte(Defines.ACTION_TYPE.UNKNOWN));
+    }
 
     void Update()
     {
         //direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         //direction = this.transform.TransformDirection(direction);
-        //InputKeys();
     }
 
     void FixedUpdate()
     {
         //characterController.Move(direction*Time.deltaTime);
-    }
-
-    void InputKeys()
-    {
-        if (characterController.isGrounded)
-        {
-            if(!anim.GetParameter((int)ANIM_PARAMETER.isGround).defaultBool)
-                anim.SetBool("isGround", true);
-
-            if(anim.GetParameter((int)ANIM_PARAMETER.Blend).defaultFloat.Equals(0))
-                anim.SetBool("Idle", true);
-
-            isJump = false;
-            anim.SetBool("Jump", false);
-            anim.SetBool("Jump_Double", false);
-            anim.SetBool("Jump_Double_Fall", false);
-
-            if(Input.GetAxis("Jump") > 0)
-            {
-                isJump = true;
-                fJump = jumpSpeed;
-                anim.SetBool("Idle", false);
-                anim.SetBool("Jump", true);
-                anim.SetBool("isGround", false);
-            }
-            SetMoveAnim(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        }
-        else
-        {
-            if(isJump)
-            {
-                if(Input.GetButtonDown("Jump"))
-                {
-                    isJump = false;
-                    fJump += jumpSpeed;
-                    anim.SetBool("Jump", false);
-                    if(anim.GetParameter((int)ANIM_PARAMETER.Jump).defaultBool)
-                        anim.SetBool("Jump_Double", true);
-                    else
-                        anim.SetBool("Jump_Double_Fall", true);
-                }
-            }
-            fJump += Physics.gravity.y * Time.deltaTime;
-            direction.y = fJump;
-        }
     }
 
     void SetMoveAnim(float _x, float _y)

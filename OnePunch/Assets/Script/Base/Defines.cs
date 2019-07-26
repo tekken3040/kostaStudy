@@ -24,4 +24,7 @@ public class Defines
     public static byte RoundWin = 3;            // 승리에 필요한 라운드 수
     public static byte Action_Cnt = 5;          // 액션 슬롯 수
     public static byte MaxPowerStack = 3;       // 최대 파워 스택 수
+
+    public const string MultyPlayIsNotReady = "멀티 플레이는 준비중입니다.";
+    public const string NotSelectedAction = "선택하지 않은 행동이 있습니다s.";
 }
