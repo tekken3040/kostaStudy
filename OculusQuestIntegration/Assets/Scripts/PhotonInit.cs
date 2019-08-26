@@ -45,12 +45,15 @@ public class PhotonInit : MonoBehaviourPunCallbacks
     // 룸연결 실패 콜백 매서드
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
+        Debug.Log("방생성");
         this.CreateRoom();
     }
 
     // 방에 접속시 캐릭터 생성
     public override void OnJoinedRoom()
     {
+        Debug.Log(PhotonNetwork.CurrentRoom.Name);
+        Debug.Log("캐릭터 생성");
         Invoke("CharacterInit", 1.0f);
     }
 
@@ -63,8 +66,10 @@ public class PhotonInit : MonoBehaviourPunCallbacks
     // 캐릭터 생성
     private void CharacterInit()
     {
-        _gun.SetActive(true);
-        _light.SetActive(true);
+        //_gun.SetActive(true);
+        //_light.SetActive(true);
+        GameObject gun = PhotonNetwork.Instantiate("Handgun_M1911A_Black", new Vector3(21f, 1f, 1.5f), Quaternion.identity);
+        GameObject flashLight = PhotonNetwork.Instantiate("Flashlight", new Vector3(21f, 1f, 2f), Quaternion.identity);
 
         if(playerSetting == PlayerSetting.PUNObject)
         {
