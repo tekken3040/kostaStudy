@@ -74,6 +74,7 @@
     <Compile Include="Assets\ArcTeleporter\Scripts\SharedCode\ArcVisualizer.cs" />
     <Compile Include="Assets\ArcTeleporter\Scripts\TallLocomotion\TallRaycaster.cs" />
     <Compile Include="Assets\ArcTeleporter\Scripts\TallLocomotion\TallVisualizer.cs" />
+    <Compile Include="Assets\Nokobot\ModernGuns_Handgun\Demo Assets\DestroyObject.cs" />
     <Compile Include="Assets\Nokobot\ModernGuns_Handgun\Demo Assets\SimpleShoot.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AmbienceEmitter.cs" />

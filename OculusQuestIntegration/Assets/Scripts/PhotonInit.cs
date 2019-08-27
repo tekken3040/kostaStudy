@@ -60,7 +60,7 @@ public class PhotonInit : MonoBehaviourPunCallbacks
     private void CreateRoom()
     {
         // CreateRoom(방이름, 방옵션)
-        PhotonNetwork.CreateRoom(null, new RoomOptions{MaxPlayers = 2 });
+        PhotonNetwork.CreateRoom(null, new RoomOptions{MaxPlayers = 4 });
     }
 
     // 캐릭터 생성
@@ -68,8 +68,8 @@ public class PhotonInit : MonoBehaviourPunCallbacks
     {
         //_gun.SetActive(true);
         //_light.SetActive(true);
-        GameObject gun = PhotonNetwork.Instantiate("Handgun_M1911A_Black", new Vector3(21f, 1f, 1.5f), Quaternion.identity);
-        GameObject flashLight = PhotonNetwork.Instantiate("Flashlight", new Vector3(21f, 1f, 2f), Quaternion.identity);
+        //GameObject gun = PhotonNetwork.Instantiate("Handgun_M1911A_Black", new Vector3(21f, 1f, 1.5f), Quaternion.identity);
+        //GameObject flashLight = PhotonNetwork.Instantiate("Flashlight", new Vector3(21f, 1f, 2f), Quaternion.identity);
 
         if(playerSetting == PlayerSetting.PUNObject)
         {

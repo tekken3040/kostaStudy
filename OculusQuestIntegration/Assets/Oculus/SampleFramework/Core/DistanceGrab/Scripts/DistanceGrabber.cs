@@ -106,9 +106,9 @@ namespace OculusSampleFramework
 #if UNITY_EDITOR
             OVRPlugin.SendEvent("distance_grabber", (SceneManager.GetActiveScene().name == "DistanceGrab").ToString(), "sample_framework");
 #endif
-    }
+        }
 
-    void Update()
+        void Update()
         {
 
             Debug.DrawRay(transform.position, transform.forward, Color.red, 0.1f);
@@ -135,7 +135,7 @@ namespace OculusSampleFramework
                 }
             }
         }
-
+        
         protected override void GrabBegin()
         {
             DistanceGrabbable closestGrabbable = m_target;
@@ -369,7 +369,7 @@ namespace OculusSampleFramework
         }
 
         // Just here to allow calling of a protected member function.
-      protected override void OffhandGrabbed(OVRGrabbable grabbable)
+        protected override void OffhandGrabbed(OVRGrabbable grabbable)
         {
             base.OffhandGrabbed(grabbable);
         }
