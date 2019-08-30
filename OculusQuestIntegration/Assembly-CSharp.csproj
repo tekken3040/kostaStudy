@@ -406,6 +406,7 @@
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\RemoteSpeakerUI.cs" />
     <Compile Include="Assets\Scripts\BoxGrab.cs" />
     <Compile Include="Assets\Scripts\ControllerListener.cs" />
+    <Compile Include="Assets\Scripts\CustomPhotonTransformView.cs" />
     <Compile Include="Assets\Scripts\IKCustomLocomotion.cs" />
     <Compile Include="Assets\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\Scripts\Outliner.cs" />
