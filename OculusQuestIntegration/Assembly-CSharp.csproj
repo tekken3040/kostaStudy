@@ -74,6 +74,38 @@
     <Compile Include="Assets\ArcTeleporter\Scripts\SharedCode\ArcVisualizer.cs" />
     <Compile Include="Assets\ArcTeleporter\Scripts\TallLocomotion\TallRaycaster.cs" />
     <Compile Include="Assets\ArcTeleporter\Scripts\TallLocomotion\TallVisualizer.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\CustomTools\DrawIfAttribute.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\ReactingLights.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\SimpleJSON.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\UIExtensions.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\UnityPackages\JsonNetSample\JsonNetSample.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoController\LoadVideoTitleToText.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoController\PauseIcon.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoController\VideoProgressBar.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoController\YT_RotateCamera.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubeLogo.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubePlayer.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubePlayerLivestream.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\ChannelSearchDemo.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\CommentsDemo.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\IndividualVideoDataDemo.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\PlaylistDemo.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\VideoSearchDemo.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\YoutubeApiGetUnlimitedVideos.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\YoutubeChannelUI.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\YoutubeVideoUi.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Src\YoutubeAPIManager.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Src\YoutubeContentDetails.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Src\YoutubeSnippet.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Src\YoutubeStatistics.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\YoutubeDemoUsage.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\YoutubeSubtitlesReader.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\Exceptions.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\HTTPHelperYoutube.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\MagicHands.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\Types.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\VideoInfo.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\VideoRequest.cs" />
     <Compile Include="Assets\Nokobot\ModernGuns_Handgun\Demo Assets\DestroyObject.cs" />
     <Compile Include="Assets\Nokobot\ModernGuns_Handgun\Demo Assets\SimpleShoot.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
@@ -414,6 +446,7 @@
     <Compile Include="Assets\Scripts\PlayerAvatar.cs" />
     <Compile Include="Assets\Scripts\ShootIfGrabbed.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
+    <Compile Include="Assets\Scripts\VideoPlayerURL.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\VRIK Animated Locomotion\VRIKAnimatedLocomotion.cs" />
     <Compile Include="Assets\VRKeys\Scripts\BackspaceKey.cs" />
@@ -434,6 +467,27 @@
     <Compile Include="Assets\VRKeys\Scripts\Placement.cs" />
     <Compile Include="Assets\VRKeys\Scripts\ShiftKey.cs" />
     <Compile Include="Assets\VRKeys\Scripts\SpaceKey.cs" />
+    <Compile Include="Assets\YoutubeExtractor\AacAudioExtractor.cs" />
+    <Compile Include="Assets\YoutubeExtractor\AdaptiveType.cs" />
+    <Compile Include="Assets\YoutubeExtractor\AudioDownloader.cs" />
+    <Compile Include="Assets\YoutubeExtractor\AudioExtractionException.cs" />
+    <Compile Include="Assets\YoutubeExtractor\AudioType.cs" />
+    <Compile Include="Assets\YoutubeExtractor\BigEndianBitConverter.cs" />
+    <Compile Include="Assets\YoutubeExtractor\BitHelper.cs" />
+    <Compile Include="Assets\YoutubeExtractor\Decipherer.cs" />
+    <Compile Include="Assets\YoutubeExtractor\Downloader.cs" />
+    <Compile Include="Assets\YoutubeExtractor\DownloadUrlResolver.cs" />
+    <Compile Include="Assets\YoutubeExtractor\FlvFile.cs" />
+    <Compile Include="Assets\YoutubeExtractor\HttpHelper.cs" />
+    <Compile Include="Assets\YoutubeExtractor\IAudioExtractor.cs" />
+    <Compile Include="Assets\YoutubeExtractor\Mp3AudioExtractor.cs" />
+    <Compile Include="Assets\YoutubeExtractor\ProgressEventArgs.cs" />
+    <Compile Include="Assets\YoutubeExtractor\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\YoutubeExtractor\VideoDownloader.cs" />
+    <Compile Include="Assets\YoutubeExtractor\VideoInfo.cs" />
+    <Compile Include="Assets\YoutubeExtractor\VideoNotAvailableException.cs" />
+    <Compile Include="Assets\YoutubeExtractor\VideoType.cs" />
+    <Compile Include="Assets\YoutubeExtractor\YoutubeParseException.cs" />
     <None Include="Assets\VRCSDK\Examples\Sample Assets\Shaders\Mobile\VRChat-Mobile-Skybox.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -448,6 +502,7 @@
     <None Include="Assets\VRCSDK\Examples\Sample Assets\Shaders\Video-RealtimeEmissiveGamma.shader" />
     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\lib-build-readme.txt" />
     <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_Transparent.shader" />
+    <None Include="Assets\LightShaft\YoutubeAPI\link.xml" />
     <None Include="Assets\VRCSDK\Examples\Sample Assets\Shaders\Mobile\VRChat-Mobile-ToonLit.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_Loader.shader" />
@@ -459,8 +514,10 @@
     <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Shaders\Hands_02.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\Stereo180Video\Plugins\Android\Audio360\ThirdPartyNotices.txt" />
     <None Include="Assets\Shaders\SpookyStandardShader.shader" />
+    <None Include="Assets\LightShaft\Readme.txt" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderSelfOccluding.shader" />
     <None Include="Assets\VRCSDK\Examples\Sample Assets\Shaders\Mobile\VRChat-Mobile-MatCapLit.shader" />
+    <None Include="Assets\LightShaft\Shaders\ViewInside.shader" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderPBS.shader" />
     <None Include="Assets\Oculus\Avatar\Samples\SocialStarter\README.txt" />
     <None Include="Assets\VRCSDK\Examples\Sample Assets\Shaders\Mirror.shader" />
@@ -488,6 +545,7 @@
     <None Include="Assets\VRCSDK\Examples\Sample Assets\Shaders\Mobile\VRChat-Mobile-BumpedDiffuse.shader" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderPBSV2.shader" />
     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
+    <None Include="Assets\LightShaft\YoutubeAPI\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_SingleComponent.shader" />
@@ -497,6 +555,7 @@
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarMaterialStateShader.cginc" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Expressive\AvatarEyeLens.shader" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShader.shader" />
+    <None Include="Assets\LightShaft\Shaders\Panoramic360.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\ToyCubeWithOutline.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\VRCSDK\Examples\Sample Assets\Shaders\Mobile\VRChat-Mobile-StandardLite.shader" />
@@ -763,6 +822,9 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>C:/GitHub/KostsaProject/kostaStudy/OculusQuestIntegration/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/GitHub/KostsaProject/kostaStudy/OculusQuestIntegration/Assets/LightShaft/Scripts/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/2019.1.8f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

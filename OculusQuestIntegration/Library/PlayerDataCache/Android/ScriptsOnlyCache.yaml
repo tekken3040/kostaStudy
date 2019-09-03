@@ -21,12 +21,16 @@ ScriptsOnlyBuild:
     - OculusSampleFramework.GrabManager
     - OculusSampleFramework.GrabbableCrosshair
     - OvrAvatarSettings
+    - PauseIcon
     - PhotonInit
     - PlayerAvatar
     - PointersController
     - ProximityVoiceTrigger
     - ShootIfGrabbed
     - SimpleShoot
+    - VideoPlayerURL
+    - VideoProgressBar
+    - YoutubePlayer
     Oculus.VR.Editor.dll:
     - OVRConfig
     Oculus.VR.dll:
@@ -47,6 +51,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.Utilities.dll:
     - Photon.Pun.UtilityScripts.MoveByKeys
     PhotonUnityNetworking.dll:
@@ -69,15 +75,22 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
@@ -120,6 +133,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 84
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -158,6 +173,26 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9990}
     - Class: 114
       Script: {instanceID: 10026}
+    - Class: 114
+      Script: {instanceID: 10086}
+    - Class: 114
+      Script: {instanceID: 10088}
+    - Class: 114
+      Script: {instanceID: 10090}
+    - Class: 114
+      Script: {instanceID: 10094}
+    - Class: 114
+      Script: {instanceID: 10100}
+    - Class: 114
+      Script: {instanceID: 10108}
+    - Class: 114
+      Script: {instanceID: 10110}
+    - Class: 114
+      Script: {instanceID: 10142}
+    - Class: 114
+      Script: {instanceID: 10144}
+    - Class: 114
+      Script: {instanceID: 10146}
     - Class: 114
       Script: {instanceID: 10290}
     - Class: 114
@@ -221,61 +256,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12002}
     - Class: 114
-      Script: {instanceID: 12054}
+      Script: {instanceID: 12056}
     - Class: 114
-      Script: {instanceID: 12066}
+      Script: {instanceID: 12068}
     - Class: 114
-      Script: {instanceID: 12240}
+      Script: {instanceID: 12242}
     - Class: 114
-      Script: {instanceID: 12360}
+      Script: {instanceID: 12362}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 12476}
     - Class: 114
-      Script: {instanceID: 12486}
+      Script: {instanceID: 12488}
     - Class: 114
-      Script: {instanceID: 12504}
+      Script: {instanceID: 12506}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12612}
+      Script: {instanceID: 12614}
     - Class: 114
-      Script: {instanceID: 12616}
+      Script: {instanceID: 12618}
     - Class: 114
-      Script: {instanceID: 12674}
+      Script: {instanceID: 12676}
     - Class: 114
-      Script: {instanceID: 12852}
+      Script: {instanceID: 12794}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 12856}
     - Class: 114
-      Script: {instanceID: 12962}
+      Script: {instanceID: 12936}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 12966}
     - Class: 114
-      Script: {instanceID: 13200}
+      Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 13310}
+      Script: {instanceID: 13204}
     - Class: 114
-      Script: {instanceID: 13324}
+      Script: {instanceID: 13314}
     - Class: 114
-      Script: {instanceID: 13340}
+      Script: {instanceID: 13328}
     - Class: 114
       Script: {instanceID: 13344}
     - Class: 114
-      Script: {instanceID: 13506}
+      Script: {instanceID: 13348}
     - Class: 114
-      Script: {instanceID: 13614}
+      Script: {instanceID: 13510}
     - Class: 114
-      Script: {instanceID: 13678}
+      Script: {instanceID: 13618}
     - Class: 114
-      Script: {instanceID: 13764}
+      Script: {instanceID: 13682}
     - Class: 114
-      Script: {instanceID: 13864}
+      Script: {instanceID: 13768}
     - Class: 114
-      Script: {instanceID: 13888}
+      Script: {instanceID: 13868}
     - Class: 114
-      Script: {instanceID: 14162}
+      Script: {instanceID: 13892}
     - Class: 114
-      Script: {instanceID: 186438}
+      Script: {instanceID: 14166}
+    - Class: 114
+      Script: {instanceID: 61632}
+    - Class: 114
+      Script: {instanceID: 152978}
+    - Class: 114
+      Script: {instanceID: 153018}
+    - Class: 114
+      Script: {instanceID: 153026}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -309,6 +352,8 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
+      Script: {instanceID: 0}
+    - Class: 328
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -2911,6 +2956,12 @@ ScriptsOnlyBuild:
     className: StringInputField
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CustomPhotonTransformView
+  - hash:
+      serializedVersion: 2
       Hash: 4fdfe530ffd5f502ce72adb104fc64e2
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -3661,6 +3712,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DestroyObject
+  - hash:
+      serializedVersion: 2
       Hash: e1e615eaf73e560828f53edc8952e615
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -4159,7 +4216,7 @@ ScriptsOnlyBuild:
     className: OnStartDelete
   - hash:
       serializedVersion: 2
-      Hash: 1a31246343756c34b1faa8799ec022b9
+      Hash: 166fa6c05addeebd5506ecc6b34a9f46
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SimpleShoot
@@ -5149,10 +5206,130 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
+      Hash: db5b128a2d0518f72b1cd7626ac5fe35
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VideoPlayerURL
+  - hash:
+      serializedVersion: 2
+      Hash: 8d991263805220ee91af0e169a7d2ced
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CommentsDemo
+  - hash:
+      serializedVersion: 2
+      Hash: 8895d103d5efc72d06167922431d1a5d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YoutubeApiGetUnlimitedVideos
+  - hash:
+      serializedVersion: 2
+      Hash: 6a9c780d387e063c7a80115ff6456bf9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IndividualVideoDataDemo
+  - hash:
+      serializedVersion: 2
+      Hash: f1af1a501e118e7f5d8b58d80a68a80c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseIcon
+  - hash:
+      serializedVersion: 2
+      Hash: 6d8da8e39579f8db25723b41f3e9a457
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YoutubeLogo
+  - hash:
+      serializedVersion: 2
+      Hash: 604c22c6fde3453be4fee5376d4b9b05
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YoutubeChannelUI
+  - hash:
+      serializedVersion: 2
+      Hash: 2359d35ef015db18eb969ac67f2ca8c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YoutubeDemoUsage
+  - hash:
+      serializedVersion: 2
+      Hash: 7b58da42ea960ca7ddaf830d9441ff9f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JsonNetSample
+  - hash:
+      serializedVersion: 2
+      Hash: cfdf0eaf97f7a546fcc610ca78d9efe5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChannelSearchDemo
+  - hash:
+      serializedVersion: 2
+      Hash: fdb5e945718db935ef69efdfc3771f3a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YoutubeSubtitlesReader
+  - hash:
+      serializedVersion: 2
+      Hash: dfdf071491894e9584ebf921ad04a7ab
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YT_RotateCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 6e4c93fc7a829a822cb43b9f019ec107
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadVideoTitleToText
+  - hash:
+      serializedVersion: 2
+      Hash: a7669e7bfd7a8199e1ab7939b6ca0ad3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VideoSearchDemo
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: DestroyObject
+    className: YoutubeAPIManager
+  - hash:
+      serializedVersion: 2
+      Hash: baa37db6aa3aa15ce897daad608d73dd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YoutubePlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 3ef1ebac9c719891758403d3671034eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VideoProgressBar
+  - hash:
+      serializedVersion: 2
+      Hash: 604c22c6fde3453be4fee5376d4b9b05
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YoutubeVideoUi
+  - hash:
+      serializedVersion: 2
+      Hash: 6fbc39eb6609ec500eb62f220cb55c3d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlaylistDemo
+  - hash:
+      serializedVersion: 2
+      Hash: 4f060d72eaddef3ac8dabd374ea5b89d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YoutubePlayerLivestream
+  - hash:
+      serializedVersion: 2
+      Hash: f527afaa73b0c72ae7465548df056c19
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ReactingLights
   platform: 13
   scenePathNames:
   - Assets/Scenes/MansionWalk 1.unity

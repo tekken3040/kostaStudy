@@ -329,6 +329,9 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/GitHub/KostsaProject/kostaStudy/OculusQuestIntegration/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/GitHub/KostsaProject/kostaStudy/OculusQuestIntegration/Assets/LightShaft/Scripts/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/2019.1.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
