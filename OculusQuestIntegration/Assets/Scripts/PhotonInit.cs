@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using Photon.Pun;
 using Photon.Realtime;
 
@@ -12,6 +13,10 @@ public class PhotonInit : MonoBehaviourPunCallbacks
     [SerializeField] PlayerSetting playerSetting = PlayerSetting.PUNObject;
     [SerializeField] GameObject _gun;
     [SerializeField] GameObject _light;
+    [SerializeField] GameObject OVRPointer;
+    [SerializeField] GameObject _eventSystem;
+    [SerializeField] GameObject _visualizer;
+    [SerializeField] Canvas _youtubeCanvas;
 
     public enum PlayerSetting
     {
@@ -70,14 +75,15 @@ public class PhotonInit : MonoBehaviourPunCallbacks
         //_light.SetActive(true);
         //GameObject gun = PhotonNetwork.Instantiate("Handgun_M1911A_Black", new Vector3(21f, 1f, 1.5f), Quaternion.identity);
         //GameObject flashLight = PhotonNetwork.Instantiate("Flashlight", new Vector3(21f, 1f, 2f), Quaternion.identity);
+        // 바디
+        GameObject player = Instantiate(_player);
+        player.name = "Player";
+        //player.transform.position = new Vector3(0, 0.689f, 0);
+        player.transform.position = Vector3.zero;
 
+        //GameObject player = GameObject.Find("Player");
         if(playerSetting == PlayerSetting.PUNObject)
         {
-            // 바디
-            GameObject player = Instantiate(_player);
-            player.name = "Player";
-            player.transform.position = new Vector3(21.87f, 0.875f, 1.558f);
-
             // 네트워크 오브젝트 생성
             GameObject punObject = PhotonNetwork.Instantiate("PUNObject", new Vector3(21.87f, 0.875f, 1.558f), Quaternion.identity);
             punObject.transform.parent = GameObject.Find("Player").transform;
@@ -95,12 +101,6 @@ public class PhotonInit : MonoBehaviourPunCallbacks
         }
         else if(playerSetting == PlayerSetting.NFD_Kosuzu)
         {
-            // 바디
-            GameObject player = Instantiate(_player);
-            player.name = "Player";
-            //player.transform.position = new Vector3(0, 0.689f, 0);
-            player.transform.position = Vector3.zero;
-
             // 네트워크 오브젝트 생성
             //GameObject punObject = PhotonNetwork.Instantiate("Miraikomachi", new Vector3(21.87f, 0.875f, 1.558f), Quaternion.identity);
             GameObject punObject = PhotonNetwork.Instantiate("NFD_Kosuzu", Vector3.zero, Quaternion.identity);
@@ -122,5 +122,12 @@ public class PhotonInit : MonoBehaviourPunCallbacks
             player.transform.position = new Vector3(21.87f, 0, 1.558f);
             //punObject.transform.localPosition = new Vector3(0, 0, 0);
         }
+        OVRPointer.SetActive(true);
+        OVRPointer.GetComponent<OVRGazePointer>().rayTransform = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").transform;
+        _visualizer.SetActive(true);
+        //_visualizer.GetComponent<ControllerSelection.OVRPointerVisualizer>().trackingSpace = player.transform.Find("OVRCameraRig/TrackingSpace").transform;
+        _eventSystem.SetActive(true);
+        _eventSystem.GetComponent<OVRInputModule>().rayTransform = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").transform;
+        _youtubeCanvas.worldCamera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").GetComponent<Camera>();
     }
 }
