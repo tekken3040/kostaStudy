@@ -5446,7 +5446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EventMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 32
   sortOrder: 20
 --- !u!1 &6794657786252944855
 GameObject:

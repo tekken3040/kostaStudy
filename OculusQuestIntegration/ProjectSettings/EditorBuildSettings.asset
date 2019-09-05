@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MansionWalk 1.unity
     guid: 52cf91436cf58954a8c55e77f777cc8b
+  - enabled: 0
+    path: Assets/Oculus/VR/Scenes/UI.unity
+    guid: 1f4d3ae64a10d434db219de8b14348e1
   m_configObjects: {}

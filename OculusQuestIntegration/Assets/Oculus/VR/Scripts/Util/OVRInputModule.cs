@@ -639,7 +639,7 @@ namespace UnityEngine.EventSystems
             if (physicsRaycaster)
             {
                 Vector3 position =  raycast.worldPosition;
-
+                RaycastResult result = new RaycastResult();
                 if (performSphereCastForGazepointer)
                 {
                     // Here we cast a sphere into the scene rather than a ray. This gives a more accurate depth
@@ -649,6 +649,7 @@ namespace UnityEngine.EventSystems
                     if (results.Count > 0 && results[0].distance < raycast.distance)
                     {
                         position = results[0].worldPosition;
+                        result = results[0];
                     }
                 }
 

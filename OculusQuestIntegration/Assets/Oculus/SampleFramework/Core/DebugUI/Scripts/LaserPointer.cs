@@ -89,12 +89,14 @@ public class LaserPointer : OVRCursor
                 cursorVisual.transform.position = _endPoint;
                 cursorVisual.SetActive(true);
             }
+            lineRenderer.enabled = true;
         }
         else
         {
             UpdateLaserBeam(_startPoint, _startPoint + maxLength * _forward);
             lineRenderer.SetPosition(1, _startPoint + maxLength * _forward);
             if (cursorVisual) cursorVisual.SetActive(false);
+            lineRenderer.enabled = false;
         }
     }
 
@@ -105,22 +107,31 @@ public class LaserPointer : OVRCursor
         {
             return;
         }
+
         else if(laserBeamBehavior == LaserBeamBehavior.On)
         {
             lineRenderer.SetPosition(0, start);
             lineRenderer.SetPosition(1, end);
         }
+
         else if(laserBeamBehavior == LaserBeamBehavior.OnWhenHitTarget)
         {
             if(_hitTarget)
             {
+                
                 if (!lineRenderer.enabled)
                 {
                     lineRenderer.enabled = true;
                     lineRenderer.SetPosition(0, start);
                     lineRenderer.SetPosition(1, end);
                 }
+                
+                else
+                {
+                    lineRenderer.enabled = false;
+                }
             }
+
             else
             {
                 if(lineRenderer.enabled)

@@ -16,6 +16,7 @@ public class PhotonInit : MonoBehaviourPunCallbacks
     [SerializeField] GameObject OVRPointer;
     [SerializeField] GameObject _eventSystem;
     [SerializeField] GameObject _visualizer;
+    [SerializeField] GameObject _youTubeObj;
     [SerializeField] Canvas _youtubeCanvas;
 
     public enum PlayerSetting
@@ -122,12 +123,13 @@ public class PhotonInit : MonoBehaviourPunCallbacks
             player.transform.position = new Vector3(21.87f, 0, 1.558f);
             //punObject.transform.localPosition = new Vector3(0, 0, 0);
         }
-        OVRPointer.SetActive(true);
-        OVRPointer.GetComponent<OVRGazePointer>().rayTransform = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").transform;
+        //OVRPointer.SetActive(true);
+        //OVRPointer.GetComponent<OVRGazePointer>().rayTransform = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").transform;
         _visualizer.SetActive(true);
         //_visualizer.GetComponent<ControllerSelection.OVRPointerVisualizer>().trackingSpace = player.transform.Find("OVRCameraRig/TrackingSpace").transform;
-        _eventSystem.SetActive(true);
+        //_eventSystem.SetActive(true);
         _eventSystem.GetComponent<OVRInputModule>().rayTransform = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").transform;
+        _youTubeObj.SetActive(true);
         _youtubeCanvas.worldCamera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").GetComponent<Camera>();
     }
 }
