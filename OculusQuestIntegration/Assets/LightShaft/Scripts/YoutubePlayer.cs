@@ -1389,7 +1389,7 @@ public class YoutubePlayer : MonoBehaviour
     }
 
     [HideInInspector]
-    public bool pauseCalled = false;
+    public bool pauseCalled = true;
 
     public void Pause()
     {
