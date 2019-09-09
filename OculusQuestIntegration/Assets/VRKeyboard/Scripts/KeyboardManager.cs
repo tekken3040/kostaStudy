@@ -6,10 +6,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
+using Photon.Pun;
 
 namespace VRKeyboard.Utils
 {
-    public class KeyboardManager : MonoBehaviour
+    public class KeyboardManager : MonoBehaviour, IPunObservable
     {
         #region Public Variables
         [Header("User defined")]
@@ -24,9 +26,8 @@ namespace VRKeyboard.Utils
         public Transform keys;
 
         [Header("YouTube Player")]
-        public InputField URLField;
-        public Text youTubeURL;
         public YoutubePlayer youtubePlayer;
+        public InputField urlField;
         #endregion
 
         #region Private Variables
@@ -37,15 +38,20 @@ namespace VRKeyboard.Utils
         }
         private Key[] keyList;
         private bool capslockFlag;
+        private string URLField
+        {
+            get { return urlField.text; }
+            set { urlField.text = value; }
+        }
         #endregion
 
         #region Monobehaviour Callbacks
-        void Awake()
+        private void Awake()
         {
             keyList = keys.GetComponentsInChildren<Key>();
         }
 
-        void Start()
+        private void Start()
         {
             foreach (var key in keyList)
             {
@@ -59,9 +65,13 @@ namespace VRKeyboard.Utils
         #region Public Methods
         public void Backspace()
         {
-            if (Input.Length > 0)
+            if (URLField.Length > 0)
             {
-                Input = Input.Remove(Input.Length - 1);
+                //Input = Input.Remove(Input.Length - 1);
+                //Input.Remove(Input.Length - 1, 1);
+                int temp = URLField.Length-1;
+                URLField = urlField.text.Substring(0,temp);
+                //URLField.Remove(URLField.Length - 1);
             }
             else
             {
@@ -71,7 +81,7 @@ namespace VRKeyboard.Utils
 
         public void Clear()
         {
-            Input = "";
+            URLField = "";
         }
 
         public void CapsLock()
@@ -100,14 +110,24 @@ namespace VRKeyboard.Utils
         public void GenerateInput(string s)
         {
             if (Input.Length > maxInputLength) { return; }
-            Input += s;
-            URLField.text = Input;
+            URLField += s;
         }
 
         public void Enter()
         {
-            //youtubePlayer.youtubeUrl = youTubeURL.text;
-            youtubePlayer.Play(youTubeURL.text);
+            youtubePlayer.Play(Input);
+        }
+
+        public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+        {
+            if (stream.IsWriting)
+            {
+                stream.SendNext("");
+            }
+            else
+            {
+                stream.ReceiveNext();
+            }
         }
         #endregion
     }
