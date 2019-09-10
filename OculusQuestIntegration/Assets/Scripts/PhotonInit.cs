@@ -7,23 +7,22 @@ using Photon.Realtime;
 
 public class PhotonInit : MonoBehaviourPunCallbacks
 {
-    [SerializeField] private string gameVersion = "1.0";
-    [SerializeField] private string nickName = "Admin";
-    [SerializeField] private GameObject _player;
-    [SerializeField] PlayerSetting playerSetting = PlayerSetting.PUNObject;
-    [SerializeField] GameObject _gun;
-    [SerializeField] GameObject _light;
-    [SerializeField] GameObject OVRPointer;
-    [SerializeField] GameObject _eventSystem;
-    [SerializeField] GameObject _visualizer;
-    [SerializeField] GameObject _youTubeObj;
-    [SerializeField] Canvas _youtubeCanvas;
-    [SerializeField] Canvas _youtubeKeyboardCanvas;
+    [SerializeField] private string gameVersion = "1.0";                        // 게임버전
+    [SerializeField] private string nickName = "Admin";                         // 닉네임 로그인 구현 후 수정
+    [SerializeField] private GameObject _player;                                // 플레이어 프리펩 오브젝트
+    [SerializeField] PlayerSetting playerSetting = PlayerSetting.NFD_Kosuzu;    // 생성할 아바타 타입
+    [SerializeField] GameObject _gun;                                           // 총 프리펩 오브젝트
+    [SerializeField] GameObject _light;                                         // 손전등 프리펩 오브젝트
+    [SerializeField] GameObject _eventSystem;                                   // UI컨트롤에 사용될 이벤트 시스템
+    [SerializeField] GameObject _visualizer;                                    // UI에 사용될 포인터 오브젝트
+    [SerializeField] GameObject _youTubeObj;                                    // 유튜브 플레이어 게임 오브젝트
+    [SerializeField] Canvas _youtubeCanvas;                                     // 유튜브 플레이어 컨트롤 패널
+    [SerializeField] Canvas _youtubeKeyboardCanvas;                             // 유튜브 플레이어 키보드 컨트롤 패널
 
     public enum PlayerSetting
     {
-        PUNObject,
-        NFD_Kosuzu,
+        PUNObject,      // 일반 오브젝트
+        NFD_Kosuzu,     // 아바타 오브젝트
     }
 
     private void Awake()
@@ -73,10 +72,6 @@ public class PhotonInit : MonoBehaviourPunCallbacks
     // 캐릭터 생성
     private void CharacterInit()
     {
-        //_gun.SetActive(true);
-        //_light.SetActive(true);
-        //GameObject gun = PhotonNetwork.Instantiate("Handgun_M1911A_Black", new Vector3(21f, 1f, 1.5f), Quaternion.identity);
-        //GameObject flashLight = PhotonNetwork.Instantiate("Flashlight", new Vector3(21f, 1f, 2f), Quaternion.identity);
         // 바디
         GameObject player = Instantiate(_player);
         player.name = "Player";
@@ -124,13 +119,13 @@ public class PhotonInit : MonoBehaviourPunCallbacks
             player.transform.position = new Vector3(21.87f, 0, 1.558f);
             //punObject.transform.localPosition = new Vector3(0, 0, 0);
         }
-        //OVRPointer.SetActive(true);
-        //OVRPointer.GetComponent<OVRGazePointer>().rayTransform = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").transform;
+        // 손 커서 인디케이터 활성화
         _visualizer.SetActive(true);
-        //_visualizer.GetComponent<ControllerSelection.OVRPointerVisualizer>().trackingSpace = player.transform.Find("OVRCameraRig/TrackingSpace").transform;
-        //_eventSystem.SetActive(true);
+        // 이벤트 시스템에 카메라 할당
         _eventSystem.GetComponent<OVRInputModule>().rayTransform = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").transform;
+        // 유튜브 플레이어 활성화
         _youTubeObj.SetActive(true);
+        // 유튜브 플레이어 캔버스에 카메라 할당
         _youtubeCanvas.worldCamera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").GetComponent<Camera>();
         _youtubeKeyboardCanvas.worldCamera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").GetComponent<Camera>();
     }

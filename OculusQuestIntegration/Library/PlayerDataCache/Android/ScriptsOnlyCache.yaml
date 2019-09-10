@@ -2326,12 +2326,6 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
-      Hash: db5b128a2d0518f72b1cd7626ac5fe35
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VideoPlayerURL
-  - hash:
-      serializedVersion: 2
       Hash: 5887ef1bc706b22b773d253fd443ceef
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -4552,7 +4546,7 @@ ScriptsOnlyBuild:
     className: SlotRacerSplashScreen
   - hash:
       serializedVersion: 2
-      Hash: c5f3cc5536d12359075824cc6e3483d2
+      Hash: 2ac026b8326ee4ddbf91ee6af7b03465
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PhotonInit

@@ -63,15 +63,13 @@ namespace VRKeyboard.Utils
         #endregion
 
         #region Public Methods
+        // 백스페이스
         public void Backspace()
         {
             if (URLField.Length > 0)
             {
-                //Input = Input.Remove(Input.Length - 1);
-                //Input.Remove(Input.Length - 1, 1);
                 int temp = URLField.Length-1;
                 URLField = urlField.text.Substring(0,temp);
-                //URLField.Remove(URLField.Length - 1);
             }
             else
             {
@@ -79,11 +77,13 @@ namespace VRKeyboard.Utils
             }
         }
 
+        // 텍스트 전부 지우기
         public void Clear()
         {
             URLField = "";
         }
 
+        // 캡스 락
         public void CapsLock()
         {
             foreach (var key in keyList)
@@ -96,6 +96,7 @@ namespace VRKeyboard.Utils
             capslockFlag = !capslockFlag;
         }
 
+        // 시프트
         public void Shift()
         {
             foreach (var key in keyList)
@@ -115,7 +116,19 @@ namespace VRKeyboard.Utils
 
         public void Enter()
         {
-            youtubePlayer.Play(Input);
+            //youtubePlayer.Play(Input);
+            // 포톤 뷰 객체 얻어오기
+            PhotonView photonView = PhotonView.Get(this);
+            // 포톤 뷰를 통해 RPC로 메세지(함수) 전송
+            // photonView.RPC("함수명", 받을 클라이언트, 파라미터);
+            photonView.RPC("OnPlayYouTubePlayer", RpcTarget.All, Input);
+        }
+
+        // 포톤 서버로 부터 RPC를 받았을때 처리 부분
+        [PunRPC]
+        public void OnPlayYouTubePlayer(string url)
+        {
+            youtubePlayer.Play(url);
         }
 
         public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
