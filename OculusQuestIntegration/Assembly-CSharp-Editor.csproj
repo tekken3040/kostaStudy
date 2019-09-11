@@ -92,6 +92,7 @@
     <Compile Include="Assets\Oculus\Spatializer\editor\ONSPPropagationSerializationManager.cs" />
     <Compile Include="Assets\Oculus\Spatializer\editor\ONSPReflectionCustomGUI.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+    <Compile Include="Assets\SimpleWebBrowser\Editor\BrowserPostBuild.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\VRCSDK\Examples\Sample Assets\Editor\RealtimeEmissiveGammaGUI.cs" />
     <Reference Include="Unity.Timeline.Editor">
@@ -396,6 +397,12 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/GitHub/KostsaProject/kostaStudy/OculusQuestIntegration/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageLibrary">
+      <HintPath>C:/GitHub/KostsaProject/kostaStudy/OculusQuestIntegration/Assets/SimpleWebBrowser/Plugins/MessageLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SharedMemory">
+      <HintPath>C:/GitHub/KostsaProject/kostaStudy/OculusQuestIntegration/Assets/SimpleWebBrowser/Plugins/x86_x64/SharedMemory.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/2019.1.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

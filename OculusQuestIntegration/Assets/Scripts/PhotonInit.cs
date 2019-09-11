@@ -18,6 +18,8 @@ public class PhotonInit : MonoBehaviourPunCallbacks
     [SerializeField] GameObject _youTubeObj;                                    // 유튜브 플레이어 게임 오브젝트
     [SerializeField] Canvas _youtubeCanvas;                                     // 유튜브 플레이어 컨트롤 패널
     [SerializeField] Canvas _youtubeKeyboardCanvas;                             // 유튜브 플레이어 키보드 컨트롤 패널
+    [SerializeField] SimpleWebBrowser.WebBrowser2D webBrowser;                  // 웹브라우저
+    [SerializeField] Canvas _webBrowserCanvas;                                  // 웹브라우저 캔버스
 
     public enum PlayerSetting
     {
@@ -128,5 +130,7 @@ public class PhotonInit : MonoBehaviourPunCallbacks
         // 유튜브 플레이어 캔버스에 카메라 할당
         _youtubeCanvas.worldCamera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").GetComponent<Camera>();
         _youtubeKeyboardCanvas.worldCamera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").GetComponent<Camera>();
+        webBrowser.MainCamera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").GetComponent<Camera>();
+        _webBrowserCanvas.worldCamera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").GetComponent<Camera>();
     }
 }
