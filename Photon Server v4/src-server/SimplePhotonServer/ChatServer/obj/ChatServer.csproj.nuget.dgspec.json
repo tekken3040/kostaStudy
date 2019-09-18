@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\KostsaProject\\Photon Server v4\\src-server\\SimplePhotonServer\\ChatServer\\ChatServer.csproj": {}
+    "C:\\GitHub\\KostsaProject\\kostaStudy\\Photon Server v4\\src-server\\SimplePhotonServer\\ChatServer\\ChatServer.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\KostsaProject\\Photon Server v4\\src-server\\SimplePhotonServer\\ChatServer\\ChatServer.csproj": {
+    "C:\\GitHub\\KostsaProject\\kostaStudy\\Photon Server v4\\src-server\\SimplePhotonServer\\ChatServer\\ChatServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\KostsaProject\\Photon Server v4\\src-server\\SimplePhotonServer\\ChatServer\\ChatServer.csproj",
+        "projectUniqueName": "C:\\GitHub\\KostsaProject\\kostaStudy\\Photon Server v4\\src-server\\SimplePhotonServer\\ChatServer\\ChatServer.csproj",
         "projectName": "ChatServer",
-        "projectPath": "C:\\GitHub\\KostsaProject\\Photon Server v4\\src-server\\SimplePhotonServer\\ChatServer\\ChatServer.csproj",
+        "projectPath": "C:\\GitHub\\KostsaProject\\kostaStudy\\Photon Server v4\\src-server\\SimplePhotonServer\\ChatServer\\ChatServer.csproj",
         "packagesPath": "C:\\Users\\LimeParfait\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\KostsaProject\\Photon Server v4\\src-server\\SimplePhotonServer\\ChatServer\\obj\\",
+        "outputPath": "C:\\GitHub\\KostsaProject\\kostaStudy\\Photon Server v4\\src-server\\SimplePhotonServer\\ChatServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
