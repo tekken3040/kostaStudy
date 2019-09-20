@@ -134,5 +134,7 @@ public class PhotonInit : MonoBehaviourPunCallbacks
         webBrowser.MainCamera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").GetComponent<Camera>();
         _webBrowserCanvas.worldCamera = player.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").GetComponent<Camera>();
         webBrowserObj.SetActive(true);
+        _gun.SetActive(true);
+        _light.SetActive(true);
     }
 }

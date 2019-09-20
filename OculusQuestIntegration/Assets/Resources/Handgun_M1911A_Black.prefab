@@ -279,6 +279,7 @@ MonoBehaviour:
     type: 3}
   barrelLocation: {fileID: 2215568597594996386}
   casingExitLocation: {fileID: 2207054657356720846}
+  CountText: {fileID: 0}
   shotPower: 750
 --- !u!54 &2211406922997611519
 Rigidbody:

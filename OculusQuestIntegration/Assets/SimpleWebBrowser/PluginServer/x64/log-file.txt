@@ -18,3 +18,18 @@
 2019-09-18 12:07:08,304 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
 2019-09-18 12:07:08,393 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:c0f1f4d4-ae79-408c-9cd9-e538331cb75e,port:8428
 2019-09-18 12:07:17,680 [3] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2019-09-19 09:55:56,036 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2019-09-19 09:55:56,104 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:2654a007-40f2-4db0-b51d-a66261f00aab,port:8478
+2019-09-19 09:57:34,981 [3] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2019-09-19 09:57:42,450 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2019-09-19 09:57:42,483 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:905f384e-bc83-403b-987d-065bb8674d98,port:8360
+2019-09-19 09:59:41,590 [3] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2019-09-19 15:54:35,314 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2019-09-19 15:54:35,467 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:6516c15f-041b-42b2-a367-f382e579b547,port:8919
+2019-09-19 15:55:36,531 [7] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2019-09-20 15:20:02,300 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2019-09-20 15:20:02,458 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:da19ca5d-b534-4b52-999c-cbc8bbce0a63,port:8079
+2019-09-20 15:20:42,069 [3] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2019-09-20 15:20:58,062 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2019-09-20 15:20:58,095 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:3c0adbea-ea81-4356-85e4-d151181022be,port:8203
+2019-09-20 15:21:06,222 [3] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========

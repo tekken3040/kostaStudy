@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/InAppBrowser/Example/ExampleJavaScriptCommunicationScene.unity
+- path: Assets/Scenes/MansionWalk 1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
